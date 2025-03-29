@@ -1,0 +1,47 @@
+/* Styles for the footer */
+.footer {
+    background-color: var(--dark-green); /* Sets the background color using a custom color variable */
+    color: white; /* Sets the text color to white */
+}
+
+/* Styles for paragraphs inside the footer */
+.footer p {
+    font-size: 15px; /* Sets the font size of paragraphs inside the footer to 15px */
+}
+
+/* Styles for the logo image inside the footer */
+.image_logo img {
+    width: 150px; /* Sets the width of the logo image to 150px */
+    height: 150px; /* Sets the height of the logo image to 150px */
+}
+
+/* Styles for the site map (navigation) list inside the footer */
+.footer .site_map ul {
+    list-style-type: none; /* Removes the default bullet points from the unordered list */
+    padding-left: 0; /* Removes left padding from the list, eliminating the default indentation */
+}
+
+/* Styles for the links inside the site map */
+.footer .site_map a {
+    font-size: 15px; /* Sets the font size of the links inside the site map to 15px */
+}
+
+/* General styles for the links inside the footer */
+.footer a {
+    color: white; /* Sets the default color of the links to white */
+    transition: all 0.2s; /* Adds a smooth transition effect of 0.2 seconds for any property changes */
+}
+
+/* Styles for the links when hovering over them */
+.footer a:hover {
+    color: rgb(211, 211, 211); /* Changes the color of the links to a light gray when hovering */
+}
+
+#button_publish{
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    color: var(--dark-green);
+    font-size: 19px;
+}

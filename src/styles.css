@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -43,4 +44,21 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     /* Thin */
+}
+
+/* Aplica roboto-light a todas las etiquetas <p> */
+p,a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Light */
+}
+
+/* Aplica roboto-bold a todas las etiquetas <h1>, <h2>, <h3>, <h4>, <h5>, <h6> */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Cambia el color del enlace a negro, puedes usar cualquier color */
 }
