@@ -3,3 +3,19 @@
     background-color: var(--dark-green); /* Sets the background color using a custom color variable */
     color: white; /* Sets the text color to white */
 }
+
+/* Styles for paragraphs inside the footer */
+.footer p {
+    font-size: 14px; /* Sets the font size of paragraphs inside the footer to 15px */
+}
+
+/* General styles for the links inside the footer */
+.footer a {
+    color: white; /* Sets the default color of the links to white */
+    transition: all 0.2s; /* Adds a smooth transition effect of 0.2 seconds for any property changes */
+}
+
+.footer_logo img{
+    width: 150px;
+    height: 150px;
+}
