@@ -6,7 +6,18 @@
 
 /* Styles for paragraphs inside the footer */
 .footer p {
-    font-size: 15px; /* Sets the font size of paragraphs inside the footer to 15px */
+    font-size: 14px; /* Sets the font size of paragraphs inside the footer to 15px */
+}
+
+/* General styles for the links inside the footer */
+.footer a {
+    color: white; /* Sets the default color of the links to white */
+    transition: all 0.2s; /* Adds a smooth transition effect of 0.2 seconds for any property changes */
+}
+
+/* Styles for the links when hovering over them */
+.footer a:hover {
+    color: rgb(211, 211, 211); /* Changes the color of the links to a light gray when hovering */
 }
 
 /* Styles for the logo image inside the footer */
@@ -26,15 +37,22 @@
     font-size: 15px; /* Sets the font size of the links inside the site map to 15px */
 }
 
-/* General styles for the links inside the footer */
-.footer a {
-    color: white; /* Sets the default color of the links to white */
-    transition: all 0.2s; /* Adds a smooth transition effect of 0.2 seconds for any property changes */
+.support_contactUs{
+    display: flex; 
+    justify-content: flex-end; 
 }
 
-/* Styles for the links when hovering over them */
-.footer a:hover {
-    color: rgb(211, 211, 211); /* Changes the color of the links to a light gray when hovering */
+.support_contactUs > div{
+    margin-left: auto;
+}
+
+.createBusiness {
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.createBusiness > div {
+    margin-left: auto; 
 }
 
 #button_publish{

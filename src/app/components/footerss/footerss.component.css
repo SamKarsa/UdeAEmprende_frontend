@@ -1,0 +1,5 @@
+/* Styles for the footer */
+.footer {
+    background-color: var(--dark-green); /* Sets the background color using a custom color variable */
+    color: white; /* Sets the text color to white */
+}
