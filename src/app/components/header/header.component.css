@@ -1,3 +1,30 @@
-#mainNavBar {
-    background: var(--dark-green);
+.headerLinkUdeA {
+    min-width: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+.bi-search {
+    color: var(--dark-green);
+    margin: 4px;
+    background-color: var(--white);
+}
+
+#mainNavBar a {
+    color: var(--white);
+}
+
+form-control:active {
+    border: none;
+}
+
+
+.dropdown-menu {
+    background-color: var(--dark-green);
+}
+
+.dropdown-item:hover {
+    background-color: var(--white);
+    color: var(--dark-green) !important;
+
 }

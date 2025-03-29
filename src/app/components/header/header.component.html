@@ -1,39 +1,48 @@
-<nav id="mainNavBar" class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg px-5 py-4 bg-success">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a routerLink="/" aria-label="UdeAemprende logo">
+            <img class="ps-3 my-2 me-3" src="assests/logos/Logo White.svg" alt="UdeAemprende logo - go to to home"
+                width="auto" height="50">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/business">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+
+                <li class="nav-item dropdown ">
+
+
+                    <a class="nav-link dropdown fs-4 text-light" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-list " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                        categories
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <ul class="dropdown-menu ">
+                        <li><a class="dropdown-item">Action</a></li>
+                        <li><a class="dropdown-item">Another action</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item">Something else here</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
+
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+
+            <form class="d-flex flex-grow-1" role="search">
+                <div class="input-group flex-nowrap">
+                    <input class="form-control border-start-0 rounded-pill" type="search" placeholder="Search anything"
+                        aria-label="Search">
+                    <a class="headerLinkUdeA ms-3 align-self-center" routerLink="/sign-in">Log in</a>
+                    <a class="headerLinkUdeA ms-3 align-self-center" routerLink="/sign-in">Sign in</a>
+
+                </div>
             </form>
         </div>
     </div>
