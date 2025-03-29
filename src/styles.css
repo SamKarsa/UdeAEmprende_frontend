@@ -14,3 +14,33 @@
     --black-soft: #565656;
     --black: #000000;
 }
+
+.roboto-light {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /* Light */
+}
+
+.roboto-regular {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    /* Regular */
+}
+
+.roboto-medium {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    /* Medium */
+}
+
+.roboto-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    /* Bold */
+}
+
+.roboto-thin {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    /* Thin */
+}
