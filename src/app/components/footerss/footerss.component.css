@@ -1,21 +1,71 @@
-/* Styles for the footer */
+/* Footer Base Styles */
 .footer {
-    background-color: var(--dark-green); /* Sets the background color using a custom color variable */
-    color: white; /* Sets the text color to white */
+    background-color: var(--dark-green);
+    color: white;
 }
 
-/* Styles for paragraphs inside the footer */
-.footer p {
-    font-size: 14px; /* Sets the font size of paragraphs inside the footer to 15px */
+/* Text Styles */
+.footer p, .footer a {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* General styles for the links inside the footer */
 .footer a {
-    color: white; /* Sets the default color of the links to white */
-    transition: all 0.2s; /* Adds a smooth transition effect of 0.2 seconds for any property changes */
+    color: white;
+    transition: all 0.2s;
 }
 
-.footer_logo img{
-    width: 150px;
-    height: 150px;
+.footer a:hover {
+    color: rgb(211, 211, 211);
+}
+
+/* Logo Styles */
+.footer_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Site Map Styles */
+.site-map ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Support Section Fixes */
+.support_contactUs {
+    min-width: 0; /* Permite que el texto se ajuste */
+}
+
+/* Button Enhancements */
+#button_publish {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .footer-info .col {
+        margin-bottom: 2rem;
+    }
+    
+    .footer_logo {
+        margin-bottom: 2rem;
+    }
+    
+    .support_contactUs {
+        word-break: break-word;
+    }
+    
+    .footer-bottom div[class^="col"] {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer-info .row-cols-md-4 > * {
+        flex: 0 0 auto;
+        width: 50%; /* 2 columnas en tablets */
+    }
 }

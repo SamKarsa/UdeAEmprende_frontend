@@ -1,65 +1,77 @@
 <footer class="footer">
-    <div class="footer-container container pt-5">
-
-        <div class="footer-top row">
-
+    <div class="footer-container container pt-5 pb-4">
+        <div class="row">
             <!-- Logo -->
-            <div class="footer_logo col-3 my-auto">
-                <a href="">
-                    <img src="assests/logos/Logo White.svg" alt="">
+            <div class="footer_logo col-12 col-md-3 mb-4 text-center text-md-start">
+                <a href="#" class="d-inline-block">
+                    <img src="assests/logos/Logo White.svg" alt="Logo" class="img-fluid" style="max-height: 80px;">
                 </a>
             </div>
 
-            <!-- Information Footer -->
-            <div class="footer-info col-9 row">
-
-                <!-- Site Map Section -->
-                <nav class="site-map col-2">
-                    <h6>Site Map</h6>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Business</a></li>
-                        <li><a href="">Sign Up</a></li>
-                        <li><a href="">Log In</a></li>
-                    </ul>
-                </nav>
-
-                <!-- About Us Section -->
-                <section class="about_us col-3">
-                    <h6>About Us</h6>
-                    <p>We connect entrepreneurs with clients and opportunities, providing a digital showcase for growing businesses.</p>
-                </section>
-                
-                <!-- Support and Contact Us Section -->
-                <section class="support_contactUs col-3">
-                    <div>
-                        <h6>Support and Contact Us</h6>
-                        <p id="support-contact">
-                            Need help? Contact us through our support channels.<br>
-                            <span class="roboto-regular">Phone: </span>+57 321 850 9336<br>
-                            <span class="roboto-regular">Email: </span>supportudeaemprende.com
-                        </p>
+            <!-- Information Footer - Cambiamos a disposición vertical en móviles -->
+            <div class="footer-info col-12 col-md-9">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <!-- Site Map Section -->
+                    <div class="col">
+                        <nav class="site-map">
+                            <h6 class="mb-3 roboto-bold">SITE MAP</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#" class="text-decoration-none roboto-regular">Home</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none roboto-regular">Business</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none roboto-regular">Sign Up</a></li>
+                                <li><a href="#" class="text-decoration-none roboto-regular">Log In</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                </section>
 
+                    <!-- About Us Section -->
+                    <div class="col">
+                        <section class="about_us">
+                            <h6 class="mb-3 roboto-bold">ABOUT US</h6>
+                            <p class="roboto-light">We connect entrepreneurs with clients and opportunities, providing a digital showcase for growing businesses.</p>
+                        </section>
+                    </div>
+                    
+                    <!-- Support and Contact Us Section -->
+                    <div class="col">
+                        <section class="support_contactUs">
+                            <h6 class="mb-3 roboto-bold">SUPPORT</h6>
+                            <div class="roboto-light">
+                                Need help? Contact us through our support channels.
+                            </div>
+                            <div class="mt-2 roboto-regular">
+                                <div><strong>Phone:</strong> +57 321 850 9336</div>
+                                <div class="text-nowrap"><strong>Email:</strong> support#udeaemprende.com</div>
+                            </div>
+                        </section>
+                    </div>
 
-                <!-- Create Your Business Section -->
-                <section class="createBusiness col-4">
-                        <h5>Want to showcase your business?</h5>
-                        <p>Join our platform and connect with more customers!</p>
-                        <button id="button_publish" class="roboto-medium">Publish My Business</button>
-                </section>
+                    <!-- Create Your Business Section -->
+                    <div class="col">
+                        <section class="createBusiness">
+                            <h5 class="mb-3 roboto-bold">Want to showcase your business?</h5>
+                            <p class="roboto-light mb-3">Join our platform and connect with more customers!</p>
+                            <button id="button_publish" class="btn btn-primary roboto-medium w-100 py-2">Publish My Business</button>
+                        </section>
+                    </div>
+                </div>
             </div>
-
         </div>
 
-        <div class="footer-bottom">
-            <hr>
-            <div class="footer-bottom-information row">
-                <p class="col-6"><a href="">Privacy Policy</a> | <a href="">Cookie Policy</a> | <a href="">Terms and Conditions</a></p>
-                <p class="col-6 text-end">©2024 UdeA Emprend. All rights reserved</p>
+        <div class="footer-bottom mt-4">
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 roboto-light text-center text-md-start">
+                        <a href="#" class="text-decoration-none me-2 roboto-regular">Privacy Policy</a> | 
+                        <a href="#" class="text-decoration-none mx-2 roboto-regular">Cookie Policy</a> | 
+                        <a href="#" class="text-decoration-none ms-2 roboto-regular">Terms and Conditions</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <p class="mb-0 roboto-light">©2024 UdeA Emprend. All rights reserved</p>
+                </div>
             </div>
         </div>
-
     </div>  
 </footer>
