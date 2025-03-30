@@ -1,5 +1,5 @@
 .dropdown-item:hover {
-    color: #75b798 !important;
+    color: var(--success) !important;
 }
 
 .log-in-UdeA {
