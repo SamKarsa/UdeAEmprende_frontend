@@ -1,3 +1,64 @@
-h2 .card {
-    border: none;
-}
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Colores personalizados para UdeA */
+  :root {
+    --bs-success: #2E7D32;  /* Verde UdeA más oscuro para mejor contraste */
+    --bs-success-rgb: 46, 125, 50;
+  }
+  
+  /* Estilos para tarjetas */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none !important;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .rounded-4 {
+    border-radius: 0.75rem !important;
+  }
+  
+  /* Efectos para imágenes */
+  .shadow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Colores de fondo personalizados */
+  .bg-success-subtle {
+    background-color: rgba(var(--bs-success-rgb), 0.1) !important;
+  }
+  
+  /* Estilos para badges */
+  .badge {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 768px) {
+    .display-4 {
+      font-size: 2.5rem;
+    }
+    
+    .display-5 {
+      font-size: 2rem;
+    }
+    
+    .fs-1 {
+      font-size: 1.8rem !important;
+    }
+    
+    .fs-5 {
+      font-size: 1rem !important;
+    }
+  }
