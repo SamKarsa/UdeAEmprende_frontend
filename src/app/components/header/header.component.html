@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a routerLink="/" aria-label="UdeAemprende logo">
             <img class="ps-3 my-2 me-3" src="assets/logos/Logo White.svg" alt="UdeAemprende logo - go to to home"
-                width="auto" height="50">
+                width="auto" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
                 <li class="nav-item dropdown ">
 
 
-                    <a class="nav-link dropdown fs-4 text-light" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown fs-4 text-light p-4" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                             class="bi bi-list " viewBox="0 0 16 16">
@@ -23,13 +23,13 @@
                         </svg>
                         categories
                     </a>
-                    <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item">Action</a></li>
-                        <li><a class="dropdown-item">Another action</a></li>
+                    <ul class="dropdown-menu bg-success text-light">
+                        <li><a class="dropdown-item text-light btn ">Action</a></li>
+                        <li><a class="dropdown-item text-light btn">Another action</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <hr class="dropdown-divider ">
                         </li>
-                        <li><a class="dropdown-item">Something else here</a></li>
+                        <li><a class="dropdown-item text-light btn">Something else here</a></li>
                     </ul>
                 </li>
 
@@ -37,10 +37,14 @@
 
             <form class="d-flex flex-grow-1" role="search">
                 <div class="input-group flex-nowrap">
-                    <input class="form-control border-start-0 rounded-pill" type="search" placeholder="Search anything"
-                        aria-label="Search">
-                    <a class="headerLinkUdeA ms-3 align-self-center" routerLink="/sign-in">Log in</a>
-                    <a class="headerLinkUdeA ms-3 align-self-center" routerLink="/sign-in">Sign in</a>
+                    <input class="form-control border-start-0 rounded-pill ps-4" type="search"
+                        placeholder="Search anything" aria-label="Search">
+                    <a class="log-in-UdeA ms-3 align-self-center fs-5 text-light rounded-pill p-2"
+                        routerLink="/sign-in">Log
+                        In</a>
+                    <a class="sign-in-UdeA ms-3 align-self-center text-light rounded-pill p-2 fs-5"
+                        routerLink="/sign-in">Sign
+                        In</a>
 
                 </div>
             </form>
