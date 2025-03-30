@@ -1,30 +1,28 @@
-.headerLinkUdeA {
-    min-width: 60px;
-    text-decoration: none;
-    color: white;
-}
-
-.bi-search {
-    color: var(--dark-green);
-    margin: 4px;
-    background-color: var(--white);
-}
-
-#mainNavBar a {
-    color: var(--white);
-}
-
-form-control:active {
-    border: none;
-}
-
-
-.dropdown-menu {
-    background-color: var(--dark-green);
-}
-
 .dropdown-item:hover {
-    background-color: var(--white);
-    color: var(--dark-green) !important;
+    color: #75b798 !important;
+}
 
+.log-in-UdeA {
+    border: none;
+    transition: all ease 0.4s;
+}
+
+.log-in-UdeA:hover {
+
+    background: #f8f9fa !important;
+    color: #198754 !important;
+}
+
+.sign-in-UdeA {
+    background-color: #f8f9fa;
+    color: #198754 !important;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sign-in-UdeA:hover {
+    background-color: #198754;
+    color: #f8f9fa !important;
+    border-color: #f8f9fa;
 }
