@@ -1,1 +1,131 @@
-<p>sign-in works!</p>
+<app-header></app-header>
+<nav class="sign-in bg-light py-5">
+    <div class="sign-in-container container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-center mb-4">Sign In</h2>
+                        <form action="#" method="POST">
+                            
+                            <!-- Row for First Name and Last Name -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="first-name" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="first-name" name="first-name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="last-name" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="last-name" name="last-name" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row for Document Type and Number -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="document-type" class="form-label">Document Type</label>
+                                        <select class="form-select" id="document-type" name="document-type" required>
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="id-card">ID Card</option>
+                                            <option value="passport">Passport</option>
+                                            <option value="driver-license">Driver's License</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="document-number" class="form-label">Document Number</label>
+                                        <input type="text" class="form-control" id="document-number" name="document-number" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="mb-3">
+                                <label for="phone-number" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone-number" name="phone-number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Format: 10 digits (no spaces or dashes)</div>
+                            </div>
+
+                            <!-- Row for Occupation and Ethnicity -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="occupation" class="form-label">Occupation</label>
+                                        <select class="form-select" id="occupation" name="occupation" required>
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="student">Student</option>
+                                            <option value="employed">Employed</option>
+                                            <option value="unemployed">Unemployed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ethnicity" class="form-label">Ethnicity</label>
+                                        <select class="form-select" id="ethnicity" name="ethnicity" required>
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="hispanic">Hispanic</option>
+                                            <option value="african">African</option>
+                                            <option value="asian">Asian</option>
+                                            <option value="caucasian">Caucasian</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vulnerability -->
+                            <div class="mb-3">
+                                <label for="vulnerability" class="form-label">Vulnerability</label>
+                                <select class="form-select" id="vulnerability" name="vulnerability" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="disability">Disability</option>
+                                    <option value="low-income">Low Income</option>
+                                    <option value="none">None</option>
+                                </select>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <!-- Row for Password and Confirm Password -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-dark btn-lg">Sign In</button>
+                            </div>
+
+                            <!-- Additional Links -->
+                            <div class="mt-3 text-center">
+                                <small class="text-muted">Already have an account? <a routerLink="/log-in">Log in</a></small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<app-footer></app-footer>
