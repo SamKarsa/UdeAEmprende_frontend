@@ -1,1 +1,42 @@
-<p>log-in works!</p>
+<app-header></app-header>
+
+
+
+<form class="d-flex flex-column align-items-center p-4">
+    <!-- Contenedor principal con sombra y mejor espaciado -->
+    <div class="p-5 rounded-4 border border-2 border-success bg-white shadow" style="width: 100%; max-width: 500px;">
+        <!-- Contenedor del logo ajustado al contenido -->
+        <div class="d-flex justify-content-center mb-4 bg-success rounded mx-auto p-2" style="width: fit-content">
+            <img src="assets/logos/Logo White.svg" class="img-fluid " style="height: 100px;" alt="Logo UdeAemprende">
+        </div>
+
+        <!-- Campo Email mejorado -->
+        <div class="mb-4 d-flex align-items-center border-bottom border-2 border-success pb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                class="bi bi-person-fill me-2" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg>
+            <div class="w-100">
+                <input type="email" class="form-control border-0 bg-transparent p-2 shadow-none" id="userEmail"
+                    placeholder="Correo electrónico">
+            </div>
+        </div>
+
+        <div class="mb-4 d-flex align-items-center border-bottom border-2 border-success pb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                class="bi bi-lock-fill me-2" viewBox="0 0 16 16">
+                <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+            </svg>
+            <div class="w-100">
+                <input type="password" class="form-control border-0 bg-transparent p-2 shadow-none" id="userPassword"
+                    placeholder="Contraseña">
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success py-2 mt-2 fw-semibold">Log in</button>
+        </div>
+
+    </div>
+</form>
+<app-footer></app-footer>

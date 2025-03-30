@@ -2,54 +2,63 @@
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" routerLink="/" aria-label="UdeAemprende logo">
-            <img src="assets/logos/Logo White.svg" alt="UdeAemprende logo" width="auto" height="60" class="d-inline-block align-text-top">
+            <img src="assets/logos/Logo White.svg" alt="UdeAemprende logo" width="auto" height="60"
+                class="d-inline-block align-text-top">
         </a>
-        
+
         <!-- Botón hamburguesa para móvil -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <!-- Contenido colapsable -->
         <div class="collapse navbar-collapse" id="navbarContent">
             <!-- Categorías -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle text-white fw-medium px-3 py-2 rounded-pill mx-2" 
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="nav-link dropdown-toggle text-white fw-medium px-3 py-2 rounded-pill mx-2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-grid me-2"></i>Categories
                     </button>
                     <ul class="dropdown-menu shadow-sm border-0 mt-2">
                         <li><a class="dropdown-item py-2 px-3" href="#">Food And Drinks</a></li>
                         <li><a class="dropdown-item py-2 px-3" href="#">Sports</a></li>
                         <li><a class="dropdown-item py-2 px-3" href="#">Entertainment</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item py-2 px-3" href="#">See All</a></li>
                     </ul>
                 </li>
-                
+
                 <!-- Enlaces adicionales -->
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-medium px-3 py-2 rounded-pill mx-2 text-nowrap" href="#" routerLink="/about-us">About Us</a>
+                    <a class="nav-link text-white fw-medium px-3 py-2 rounded-pill mx-2 text-nowrap"
+                        routerLink="/about-us">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-medium px-3 py-2 rounded-pill mx-2" href="#" routerLink="/business">Businesses</a>
+                    <a class="nav-link text-white fw-medium px-3 py-2 rounded-pill mx-2"
+                        routerLink="/business">Businesses</a>
                 </li>
             </ul>
-            
+
             <!-- Búsqueda y botones de sesión -->
             <div class="d-flex align-items-center">
                 <form class="d-flex me-3 position-relative" role="search">
-                    <input class="form-control rounded-pill ps-4 pe-5" type="search" placeholder="Search for a business..." aria-label="Search">
+                    <input class="form-control rounded-pill ps-4 pe-5" type="search"
+                        placeholder="Search for a business..." aria-label="Search">
                     <button class="btn position-absolute end-0 top-0 bottom-0" type="submit">
                         <i class="bi bi-search text-muted"></i>
                     </button>
                 </form>
-                
+
                 <div class="d-flex gap-2">
-                    <a class="btn btn-outline-light rounded-pill px-3 py-2 fw-medium text-nowrap" href="/log-in">Log In</a>
-                    <a class="btn btn-light rounded-pill px-3 py-2 fw-medium text-success text-nowrap" href="/sign-in">Sign In</a>
+                    <a class="btn btn-outline-light rounded-pill px-3 py-2 fw-medium text-nowrap"
+                        routerLink="/log-in">Log
+                        In</a>
+                    <a class="btn btn-light rounded-pill px-3 py-2 fw-medium text-success text-nowrap"
+                        routerLink="/sign-in">Sign In</a>
                 </div>
             </div>
         </div>
