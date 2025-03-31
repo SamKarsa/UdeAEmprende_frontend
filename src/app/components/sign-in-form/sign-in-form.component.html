@@ -1,0 +1,225 @@
+<nav class="sign-in bg-light py-5">
+    <div class="sign-in-container container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-center mb-4">Sign In</h2>
+                        <form [formGroup]="signInForm" (submit)="submitSignInForm()">
+
+                            <!-- Row for First Name and Last Name -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="first-name" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="first-name" name="first-name"
+                                            formControlName="firstName">
+                                        @if(firstName.hasError("required") && firstName.touched){
+                                        <p class="errorFATAL">This field is required!!!!!</p>
+                                        }
+                                        @if(firstName.hasError("pattern") && firstName.touched){
+                                        <p class="errorFATAL">Please enter only letters and spaces!!!!!</p>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="last-name" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="last-name" name="last-name"
+                                            formControlName="lastName">
+                                        @if((lastName.hasError("required") && lastName.touched)){
+                                        <p class="errorFATAL">This field is required!!!!!</p>
+                                        }
+                                        @if(lastName.hasError("pattern") && lastName.touched){
+                                        <p class="errorFATAL">Please enter only letters and spaces!!!!!</p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row for Document Type and Number -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="document-type" class="form-label">Document Type</label>
+                                        <select class="form-select" id="document-type" formControlName="documentType">
+                                            <option [ngValue]="null" disabled selected>Select</option>
+                                            @for(documentType of documentTypeService.documentTypes; track $index){
+                                            <option [ngValue]="documentType.documentTypeId">
+                                                {{documentType.documentTypeName}}
+                                            </option> }
+
+                                        </select>
+                                        @if(signInForm.get('documentType')?.invalid &&
+                                        signInForm.get('documentType')?.touched) {
+                                        <p class="errorFATAL">
+                                            Please select a valid option
+                                        </p>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="document-number" class="form-label">Document Number</label>
+                                        <input type="text" class="form-control" id="document-number"
+                                            name="document-number" pattern="[0-9]{6,12}"
+                                            formControlName="documentNumber">
+                                        @if(documentNumber.hasError("required") && documentNumber.touched){
+                                        <p class="errorFATAL">This field is required!!!!!</p>
+                                        }
+                                        @if(documentNumber.hasError("pattern") &&
+                                        documentNumber.touched){
+                                        <p class="errorFATAL">Please enter only 10 numbers!
+                                        </p>
+                                        }
+                                        <div class="form-text">Format: 10 digits (no spaces or dashes)</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class=" mb-3">
+                                <label for="phone-number" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone-number" name="phone-number"
+                                    formControlName="phoneNumber">
+                                @if(phoneNumber.hasError("required") && phoneNumber.touched){
+                                <p class="errorFATAL">This field is required!!!!!</p>
+                                }
+                                @if(phoneNumber.hasError("pattern") &&
+                                phoneNumber.touched){
+                                <p class="errorFATAL">Please enter a only 10 numbers</p>
+                                }
+                                <div class="form-text">Format: 10 digits (no spaces or dashes)</div>
+                            </div>
+
+                            <!-- Row for Occupation and Ethnicity -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="occupation" class="form-label">Occupation</label>
+                                        <select class="form-select" id="occupation" formControlName="occupation">
+                                            <option [ngValue]="null" disabled selected>Select</option>
+                                            @for(occupation of occupationService.occupations; track $index){
+                                            <option [ngValue]="occupation.occupationId">
+                                                {{occupation.occupationName}}
+                                            </option> }
+                                        </select>
+                                        @if(signInForm.get('occupation')?.invalid &&
+                                        signInForm.get('occupation')?.touched) {
+                                        <p class="errorFATAL">
+                                            Please select a valid option
+                                        </p>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ethnicity" class="form-label">Ethnicity</label>
+                                        <select class="form-select" id="ethnicity" formControlName="ethnicity">
+                                            <option [ngValue]="null" disabled selected>Select</option>
+                                            @for(ethnicity of ethnicityService.ethnicities; track $index){
+                                            <option [ngValue]="ethnicity.ethnicityId">
+                                                {{ethnicity.ethnicityName}}
+                                            </option> }
+                                        </select>
+                                        @if(signInForm.get('ethnicity')?.invalid &&
+                                        signInForm.get('ethnicity')?.touched) {
+                                        <p class="errorFATAL">
+                                            Please select a valid option
+                                        </p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vulnerability -->
+                            <div class="mb-3">
+                                <label for="vulnerability" class="form-label">Vulnerability</label>
+                                <select class="form-select" id="vulnerability" formControlName="vulnerability">
+                                    <option [ngValue]="null" disabled selected>Select</option>
+                                    @for(vulnerability of vulnerabilityService.vulnerabilities; track $index){
+                                    <option [ngValue]="vulnerability.vulnerabilityId">
+                                        {{vulnerability.vulnerabilityName}}
+                                    </option> }
+                                    @if(vulnerability.value == 'Select' && vulnerability.touched){
+                                    <p class="errorFATAL">Select one!!</p>
+                                    }
+                                </select>
+                                @if(signInForm.get('vulnerability')?.invalid &&
+                                signInForm.get('vulnerability')?.touched) {
+                                <p class="errorFATAL">
+                                    Please select a valid option
+                                </p>
+                                }
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    formControlName="email">
+                                @if(email.hasError("required") && email.touched){
+                                <p class="errorFATAL">This field is required!!!!!</p>
+                                }
+                                @if (email.hasError("email") && email.touched) {
+                                <p class="errorFATAL">This field need to be a valid email </p>
+                                }
+                            </div>
+
+                            <!-- Row for Password and Confirm Password -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            formControlName="password"
+                                            [class.is-invalid]="signInForm.get('password')?.invalid && signInForm.get('password')?.touched">
+                                        @if (signInForm.get('password')?.hasError('required') &&
+                                        signInForm.get('password')?.touched) {
+                                        <div class="invalid-feedback">This field is required</div>
+                                        }
+                                        @if (signInForm.get('password')?.hasError('minlength') &&
+                                        signInForm.get('password')?.touched) {
+                                        <div class="invalid-feedback">Please min 8 lenght</div>
+                                        }
+                                        <div class="form-text">Min 8 length</div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="confirm-password" class="form-label">Confirm
+                                            Password</label>
+                                        <input type="password" class="form-control" id="confirm-password"
+                                            name="confirm-password" formControlName="confirmPassword"
+                                            [class.is-invalid]="signInForm.hasError('passwordMismatch') && signInForm.get('confirmPassword')?.touched">
+                                        @if (signInForm.get('confirmPassword')?.hasError('required') &&
+                                        signInForm.get('confirmPassword')?.touched) {
+                                        <div class="invalid-feedback">Please confirm your password</div>
+                                        }
+                                        @if (signInForm.hasError('passwordMismatch') &&
+                                        signInForm.get('confirmPassword')?.touched) {
+                                        <div class="invalid-feedback">The passwords don't match</div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button [disabled]="signInForm.invalid" class="btn btn-dark btn-lg">Sign
+                                    In</button>
+                            </div>
+
+                            <!-- Additional Links -->
+                            <div class="mt-3 text-center">
+                                <small class="text-muted">Already have an account? <a routerLink="/log-in">Log
+                                        in</a></small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

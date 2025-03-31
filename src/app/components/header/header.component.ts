@@ -10,7 +10,8 @@ import { CategoryService } from '../../services/category.service';
 })
 export class HeaderComponent {
 
-  constructor(public categoryService: CategoryService) { }
+  constructor(public categoryService: CategoryService) {
+  }
   ngOnInit(): void {
     this.getAllCategories();
   }
