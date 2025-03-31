@@ -33,9 +33,10 @@
                                         <label for="document-type" class="form-label">Document Type</label>
                                         <select class="form-select" id="document-type" name="document-type" required>
                                             <option value="" disabled selected>Select</option>
-                                            <option value="id-card">ID Card</option>
-                                            <option value="passport">Passport</option>
-                                            <option value="driver-license">Driver's License</option>
+                                            @for(documentType of documentTypeService.documentTypes; track $index){
+                                            <option [value]="documentType.documentTypeName">
+                                                {{documentType.documentTypeName}}
+                                            </option> }
                                         </select>
                                     </div>
                                 </div>
@@ -43,13 +44,13 @@
                                     <div class="form-group">
                                         <label for="document-number" class="form-label">Document Number</label>
                                         <input type="text" class="form-control" id="document-number"
-                                            name="document-number" required>
+                                            name="document-number" pattern="[0-9]{6,12}" required>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Phone Number -->
-                            <div class="mb-3">
+                            <div class=" mb-3">
                                 <label for="phone-number" class="form-label">Phone Number</label>
                                 <input type="tel" class="form-control" id="phone-number" name="phone-number"
                                     pattern="[0-9]{10}" required>
@@ -63,9 +64,10 @@
                                         <label for="occupation" class="form-label">Occupation</label>
                                         <select class="form-select" id="occupation" name="occupation" required>
                                             <option value="" disabled selected>Select</option>
-                                            <option value="student">Student</option>
-                                            <option value="employed">Employed</option>
-                                            <option value="unemployed">Unemployed</option>
+                                            @for(occupation of occupationService.occupations; track $index){
+                                            <option [value]="occupation.occupationName">
+                                                {{occupation.occupationName}}
+                                            </option> }
                                         </select>
                                     </div>
                                 </div>
@@ -75,7 +77,8 @@
                                         <select class="form-select" id="ethnicity" name="ethnicity" required>
                                             <option value="" disabled selected>Select</option>
                                             @for(ethnicity of ethnicityService.ethnicities; track $index){
-                                            <option [value]="ethnicity.ethnicityName">{{ethnicity.ethnicityName}}
+                                            <option [value]="ethnicity.ethnicityName">
+                                                {{ethnicity.ethnicityName}}
                                             </option> }
                                         </select>
                                     </div>
@@ -87,9 +90,10 @@
                                 <label for="vulnerability" class="form-label">Vulnerability</label>
                                 <select class="form-select" id="vulnerability" name="vulnerability" required>
                                     <option value="" disabled selected>Select</option>
-                                    <option value="disability">Disability</option>
-                                    <option value="low-income">Low Income</option>
-                                    <option value="none">None</option>
+                                    @for(vulnerability of vulnerabilityService.vulnerabilities; track $index){
+                                    <option [value]="vulnerability.vulnerabilityName">
+                                        {{vulnerability.vulnerabilityName}}
+                                    </option> }
                                 </select>
                             </div>
 
@@ -110,7 +114,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                                        <label for="confirm-password" class="form-label">Confirm
+                                            Password</label>
                                         <input type="password" class="form-control" id="confirm-password"
                                             name="confirm-password" required>
                                     </div>

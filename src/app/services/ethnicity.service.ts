@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Ethnicity } from '../models/Ethnicity.model';
 
 
 @Injectable({
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class EthnicityService {
 
-  ethnicities: any[];
+  ethnicities: Ethnicity[];
 
   readonly apiURL = "http://localhost:8080/api/ethnicity";
 
@@ -15,8 +16,8 @@ export class EthnicityService {
     this.ethnicities = [];
   }
 
-  getEthnicities() {
-    return this.http.get<any[]>(this.apiURL);
+  getAllEthnicities() {
+    return this.http.get<Ethnicity[]>(this.apiURL);
   }
 
 }
