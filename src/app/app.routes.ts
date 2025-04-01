@@ -4,6 +4,8 @@ import { BusinessComponent } from './pages/business/business.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { BusinessDataComponent } from './pages/business-data/business-data.component';
+import { PersonalDataComponent } from './pages/personal-data/personal-data.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -11,4 +13,6 @@ export const routes: Routes = [
     { path: 'sign-in', component: SignInComponent },
     { path: 'log-in', component: LogInComponent },
     { path: 'about-us', component: AboutUsComponent },
+    { path: 'business-data', component: BusinessDataComponent },
+    { path: 'personal-data', component: PersonalDataComponent}
 ];
