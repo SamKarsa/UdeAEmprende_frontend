@@ -207,7 +207,8 @@
 
                             <!-- Submit Button -->
                             <div class="text-center">
-                                <button [disabled]="signInForm.invalid" class="btn btn-dark btn-lg">Sign
+                                <button [disabled]="signInForm.invalid" (ngSubmit)="submitSignInForm()"
+                                    class="btn btn-dark btn-lg">Sign
                                     In</button>
                             </div>
 

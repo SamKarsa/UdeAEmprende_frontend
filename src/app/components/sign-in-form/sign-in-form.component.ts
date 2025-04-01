@@ -4,7 +4,11 @@ import { VulnerabilityService } from '../../services/vulnerability.service';
 import { OccupationService } from '../../services/occupation.service';
 import { DocumentTypeService } from '../../services/document-type.service';
 import { RouterLink } from '@angular/router';
-import { AbstractControl, Form, FormControl, FormGroup, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/User.model';
+import { RolService } from '../../services/role.service';
+import { Role } from '../../models/Role.model';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -26,8 +30,9 @@ export class SignInFormComponent implements OnInit {
   occupation: FormControl;
   documentType: FormControl;
   vulnerability: FormControl;
+  newUserId: number | undefined;
 
-  constructor(public ethnicityService: EthnicityService, public vulnerabilityService: VulnerabilityService, public occupationService: OccupationService, public documentTypeService: DocumentTypeService) {
+  constructor(public ethnicityService: EthnicityService, public vulnerabilityService: VulnerabilityService, public occupationService: OccupationService, public documentTypeService: DocumentTypeService, public userService: UserService, public roleService: RolService) {
     this.firstName = new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/)]);
     this.lastName = new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/)]);
     this.documentNumber = new FormControl('', [Validators.required, Validators.pattern(/^\d{6,12}$/)]);
@@ -119,7 +124,9 @@ export class SignInFormComponent implements OnInit {
   }
 
   submitSignInForm() {
-    console.log(this.signInForm.value);
+    this.postUser();
+    this.postRole();
+    // this.signInForm.reset();
   }
 
   passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
@@ -131,4 +138,47 @@ export class SignInFormComponent implements OnInit {
   };
 
 
+
+
+  postUser() {
+    const userData: User = {
+      email: this.signInForm.get('email')?.value,
+      password: this.signInForm.get('password')?.value,
+      userStatus: true
+    }
+
+
+    this.userService.postUser(userData).subscribe({
+      next: (createdUser) => {
+        console.log("The new user is created");
+        this.newUserId = createdUser.userId;
+      },
+      error: (error) => {
+        alert("Can't get access to api " + error);
+        console.log(userData);
+      }
+    })
+
+  }
+
+  postRole() {
+    const userRoleData: Role = {
+      userId: this.newUserId,
+      userTypeId: this.signInForm.get('documentType')?.value
+    }
+
+    this.roleService.postRole(userRoleData).subscribe({
+      next: (createdRole) => {
+        console.log("The new role is created");
+        console.log(createdRole);
+      },
+      error: (error) => {
+        alert("Can't get access to api " + error);
+        console.log(userRoleData);
+      }
+    })
+
+  }
+
 }
+
