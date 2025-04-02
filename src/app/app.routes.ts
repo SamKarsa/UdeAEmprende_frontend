@@ -7,6 +7,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BusinessDataComponent } from './pages/business-data/business-data.component';
 import { PersonalDataComponent } from './pages/personal-data/personal-data.component';
 import { PersonalDataFormComponent } from './components/personal-data-form/personal-data-form.component';
+import { BusinessDataFormComponent } from './components/business-data-form/business-data-form.component';
+
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,4 +19,5 @@ export const routes: Routes = [
     { path: 'business-data', component: BusinessDataComponent },
     { path: 'personal-data', component: PersonalDataComponent},
     { path: 'personal-data-form', component: PersonalDataFormComponent},
+    { path: 'business-data-form', component: BusinessDataFormComponent}
 ];

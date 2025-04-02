@@ -1,0 +1,11 @@
+/* business-data-form.component.css */
+.form-control.autosize {
+    min-height: 60px;             /* Altura mínima inicial */
+    resize: none;                 /* Deshabilita el redimensionamiento manual */
+    overflow-y: hidden;           /* Oculta el scroll vertical */
+    transition: height 0.2s ease; /* Animación suave al redimensionar */
+    box-sizing: border-box;       /* Incluye padding en el cálculo de altura */
+    width: 100%;                 /* Asegura ancho completo (opcional) */
+    padding: 0.75rem;            /* Padding consistente con Bootstrap (ajustable) */
+}
+
