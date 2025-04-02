@@ -1,44 +1,180 @@
-<section class="profile-section">
-    <header class="profile-header">
-        <div class="user-info">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-            </svg>
-            <p class="user-name">Alexx</p>
-        </div>
+<section class="profile-container m-5">
 
-        <button class="btn-back">Back</button>
+    <header class="profile-header d-flex justify-content-between align-items-center mb-4">
+        <!-- Información de usuario -->
+        <div class="user-info d-flex align-items-center">
+            <div class="me-md-4 mb-3 mb-md-0">
+                <div class="user-avatar bg-dark bg-opacity-10 rounded-circle p-3 d-inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#208454" class="bi bi-person-circle text-primary" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                  </svg>
+                </div>
+            </div>
+            <div>
+                <h3 class="mb-1">Alexander Osorio <span class="text-muted">(Alexxx)</span></h3>
+                <p class="text-muted mb-0">Student</p>
+            </div>
+        </div>
+    
+        <!-- Botón de retroceso - Añadido align-self-center -->
+        <button class="btn btn-outline-secondary btn-back d-flex align-items-center align-self-center">
+            <i class="bi bi-arrow-left me-2"></i> Back
+        </button>
     </header>
 
-    <form class="profile-form">
-        <h4>Personal Data</h4>
+    <form class="profile-form mt-2">
+        <h2 class="text-muted mb-0">Personal Data</h2>
         <hr>
 
-        <fieldset>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first_name" placeholder="Alexander">
+        <fieldset class="row g-3 mx-1 mb-4">
 
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last_name" placeholder="Osorio Trespalacios">
+            <!-- Primera columna -->
+            <div class="col-md-6">
+                <!-- First Name -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="first-name" placeholder="Alexander" value="Alexander">
+                    <label for="first-name">First Name</label>
+                </div>
 
-            <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone_number" placeholder="3137444865">
+                <!-- Document Type -->
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="document-type">
+                        <option selected disabled>Select document type</option>
+                        <option>Citizenship Card</option>
+                        <option>Passport</option>
+                    </select>
+                    <label for="document-type">Document Type</label>
+                </div>
 
-            <label for="occupation">Occupation</label>
-            <select id="occupation" name="occupation"></select>
+                <!-- Phone Number -->
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="phone-number" placeholder="3137444865" value="3137444865">
+                    <label for="phone-number">Phone Number</label>
+                </div>
 
-            <label for="document-type">Document Type</label>
-            <select id="document-type" name="document_type"></select>
+                <!-- Ethnicity -->
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="ethnicity">
+                        <option selected disabled>Select ethnicity</option>
+                        <option>African descendant</option>
+                        <option>Indigenous</option>
+                        <option>None</option>
+                    </select>
+                    <label for="ethnicity">Ethnicity</label>
+                </div>
 
-            <label for="document-number">Document Number</label>
-            <input type="tel" id="document-number" name="document_number" placeholder="1022145229">
+            </div>
 
-            <label for="ethnicity">Ethnicity</label>
-            <select id="ethnicity" name="ethnicity"></select>
+            <!-- Segunda columna -->
+            <div class="col-md-6">
+                <!-- Last Names -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="last-name" placeholder="Osorio Trespalacios" value="Osorio Trespalacios">
+                    <label for="last-name">Last Name</label>
+                </div>
 
-            <label for="vulnerability">Vulnerability</label>
-            <select id="vulnerability" name="vulnerability"></select>
+                 <!-- Document Number -->
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="document-number" placeholder="1022145229" value="1022145229">
+                    <label for="document-number">Document Number</label>
+                </div>
+
+                <!-- Occupation -->
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="occupation">
+                        <option selected disabled>Select occupation</option>
+                        <option>Student</option>
+                        <option>Developer</option>
+                        <option>Designer</option>
+                    </select>
+                    <label for="occupation">Occupation</label>
+                </div>
+
+                <!-- Vulnerability -->
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="vulnerability">
+                        <option selected disabled>Select vulnerability</option>
+                        <option>Visual Impairment</option>
+                        <option>None</option>
+                    </select>
+                    <label for="vulnerability">Vulnerability</label>
+                </div>
+            </div>
+        </fieldset>
+
+         <!-- Additional Section -->
+        <h2 class="text-muted mb-0">Account Settings</h2>
+        <hr>
+        <fieldset class="row g-3 mx-1 mb-4">
+
+            <!-- Primera columna -->
+            <div class="col-md-6">
+                <!-- Email -->
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Alexander@gmail.com" value="Alexander@gmail.com" disabled>
+                    <label for="first-name">Email Address</label>
+                </div>
+
+                <div class="form-check form-switch p-0 mb-3">
+                    <div class="card border-0 shadow-sm rounded-3">
+                      <div class="card-body d-flex justify-content-between align-items-center p-3">
+                        <div>
+                          <h6 class="fw-medium mb-1">Profile Visibility</h6>
+                          <p class="text-muted mb-0 small">Make your profile visible to other users</p>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="profile-visibility" checked aria-checked="true">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                  
+                <!-- Button Update -->
+                <div class="button-update mb-3">
+                    <button type="submit" class="btn btn-success px-4 py-2 fw-bold shadow-sm">
+                        <i class="bi bi-arrow-repeat me-2"></i> Update Profile
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Segunda columna -->    
+            <!-- Profile Visibility -->
+            <div class="col-md-6">
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#changePasswordSection">
+                    Change Password
+                </button>
+
+                <div class="collapse mt-3" id="changePasswordSection">
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="current-password" placeholder="Enter current password">
+                        <label for="current-password">Current Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="new-password" placeholder="Enter new password">
+                        <label for="new-password">New Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm new password">
+                        <label for="confirm-password">Confirm New Password</label>
+                    </div>
+
+                     <!-- Feedback visual de requisitos -->
+                     <div class="password-requirements">
+                        <p class="small text-muted mb-1">Password requirements:</p>
+                        <ul class="small text-muted">
+                            <li id="req-length">Minimum 8 characters</li>
+                            <li id="req-upper">At least one uppercase letter</li>
+                            <li id="req-lower">At least one lowercase letter</li>
+                            <li id="req-number">At least one number</li>
+                        </ul>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Update Password</button>
+                </div>
+            </div>
         </fieldset>
     </form>
 </section>
+    
