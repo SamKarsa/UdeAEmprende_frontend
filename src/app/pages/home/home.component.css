@@ -1,0 +1,117 @@
+/* Estilos para todas las nuevas secciones */
+
+/* Tarjeta de categoría */
+.category-card {
+    transition: all 0.3s ease;
+    background-color: white;
+    border: 1px solid #e9ecef;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    border-color: #198754;
+  }
+  
+  .category-icon {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Tarjetas de negocios */
+  .card {
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  /* Beneficios */
+  .benefit-card {
+    height: 100%;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #e9ecef;
+  }
+  
+  .benefit-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #198754;
+  }
+  
+  /* Estadísticas */
+  .stat-number {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    opacity: 0.9;
+    font-weight: 300;
+  }
+  
+  /* Mejoras para móviles */
+  @media (max-width: 767.98px) {
+    .display-4 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-section {
+      padding: 3rem 0;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+    }
+  }
+
+
+  /* Efecto hover para tarjetas */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Iconos circulares */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-success-light {
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+/* Ajustes para el carrusel */
+.carousel-caption {
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  bottom: 20%;
+  left: 10%;
+  right: auto;
+  width: 40%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+      width: 80%;
+      left: 10%;
+      bottom: 10%;
+  }
+  .carousel-caption h1 {
+      font-size: 1.5rem;
+  }
+}
