@@ -13,7 +13,8 @@ export interface PersonalData {
     phoneNumber: string;
     user: User;
     documentType : DocumentType;
-    ethncity: Ethnicity;
+    ethnicity: Ethnicity;
     occupation: Occupation;
     vulnerability: Vulnerability;
 }
+

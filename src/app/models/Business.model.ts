@@ -1,3 +1,8 @@
+import { BusinessCategory } from "./BusinessCategory.model";
+import { Image } from "./Image.model";
+import { SocialMedia } from "./SocialMedia.model";
+import { Review } from "./Review.model";
+
 export interface Business {
     businessId: number;
     businessName: string;
@@ -7,5 +12,8 @@ export interface Business {
     businessLocation: string;
     businessPhoneNumber: string;
     businessStatus: boolean;
-    
+    businessCateogries: BusinessCategory[];
+    images: Image[];
+    socialMedias: SocialMedia[];
+    reviews: Review[];
 }
