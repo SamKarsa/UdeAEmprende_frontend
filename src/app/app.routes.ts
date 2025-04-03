@@ -8,12 +8,13 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BusinessDataComponent } from './pages/business-data/business-data.component';
 import { PersonalDataComponent } from './pages/personal-data/personal-data.component';
+import { BusinessDetailComponent } from './pages/business-detail/business-detail.component';
 
 /*Components*/
 import { SliderHomeComponent } from './components/slider-home/slider-home.component';
 import { PersonalDataFormComponent } from './components/personal-data-form/personal-data-form.component';
 import { BusinessDataFormComponent } from './components/business-data-form/business-data-form.component';
-import { BusinessDetailComponent } from './components/business-detail/business-detail.component';
+
 
 
 export const routes: Routes = [
