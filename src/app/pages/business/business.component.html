@@ -1,26 +1,13 @@
 <app-header></app-header>
 
-<section>
-    <h1>HOLA</h1>
-    <div class="business-container">
-      <section>
-        <select name="" id="">
-            <option value="" disabled selected>Select</option>
-            @for (business of businessService.businesses; track $index) {
-                <option [value]="business.businessName">
-                    {{business.businessName}}
-                </option>
-            }
-        </select>
-      </section>
-    </div>
-
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        @for (business of businessService.businesses; track business.businessId) {
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <!-- Imagen del negocio (opcional) -->
+<main class="p-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      @for (business of businessService.businesses; track business.businessId) {
+        <div class="col">
+          <!-- Envuelve la tarjeta en un routerLink -->
+          <a [routerLink]="['/business', business.businessId]" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm hover-effect">
+              <!-- Resto del contenido de la tarjeta igual que antes -->
               @if (business.images && business.images[0]) {
                 <img [src]="business.images[0].imageURL" class="card-img-top" [alt]="business.businessName">
               } @else {
@@ -28,7 +15,7 @@
                   Sin imagen
                 </div>
               }
-    
+              
               <div class="card-body">
                 <h5 class="card-title">{{ business.businessName }}</h5>
                 <p class="card-text">
@@ -49,14 +36,10 @@
                 </small>
               </div>
             </div>
-          </div>
-        }
-      </div>
-
-
-
-
-
-</section>
+          </a>
+        </div>
+      }
+  </div>
+</main>
 
 <app-footer></app-footer>

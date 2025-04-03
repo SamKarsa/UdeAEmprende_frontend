@@ -13,6 +13,7 @@ import { PersonalDataComponent } from './pages/personal-data/personal-data.compo
 import { SliderHomeComponent } from './components/slider-home/slider-home.component';
 import { PersonalDataFormComponent } from './components/personal-data-form/personal-data-form.component';
 import { BusinessDataFormComponent } from './components/business-data-form/business-data-form.component';
+import { BusinessDetailComponent } from './components/business-detail/business-detail.component';
 
 
 export const routes: Routes = [
@@ -25,5 +26,6 @@ export const routes: Routes = [
     { path: 'personal-data', component: PersonalDataComponent},
     { path: 'personal-data-form', component: PersonalDataFormComponent},
     { path: 'business-data-form', component: BusinessDataFormComponent},
-    { path: 'slider-home', component: SliderHomeComponent }
+    { path: 'slider-home', component: SliderHomeComponent },
+    { path: 'business/:id', component: BusinessDetailComponent }
 ];

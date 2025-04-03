@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Business } from '../models/Business.model';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,10 @@ export class BusinessService {
 
   getAllBusinesses() {
     return this.http.get<Business[]>(this.apiURL);
+  }
+
+  // Añade este nuevo método para obtener un negocio por ID
+  getBusinessById(id: number): Observable<Business> {
+    return this.http.get<Business>(`${this.apiURL}/${id}`);
   }
 }
