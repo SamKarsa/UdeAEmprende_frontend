@@ -1,0 +1,70 @@
+/* Contenedor principal */
+#homeCarousel {
+    max-height: 40vh; /* Altura máxima ajustable */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+  
+  
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+  
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene relación de aspecto */
+    object-position: center;
+    min-height: 300px; /* Altura mínima para móviles */
+}
+  
+/* Indicadores */
+.carousel-indicators {
+    bottom: 20px;
+}
+  
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+  
+.carousel-indicators .active {
+    background-color: white;
+}
+  
+/* Controles de navegación */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+  
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+  
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 100% 100%;
+}
+  
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    #homeCarousel {
+      max-height: 60vh;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 15%;
+    }
+}
