@@ -93,25 +93,29 @@
   background-color: rgba(25, 135, 84, 0.1);
 }
 
-/* Ajustes para el carrusel */
-.carousel-caption {
-  background: rgba(0,0,0,0.5);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  bottom: 20%;
-  left: 10%;
-  right: auto;
-  width: 40%;
-  text-align: left;
+
+
+
+/*CAROUSEL*/
+
+/* Asegura que el slider ocupe un tamaño específico */
+#carouselExampleIndicators {
+  max-height: 600px; /* Ajusta según necesidad */
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .carousel-caption {
-      width: 80%;
-      left: 10%;
-      bottom: 10%;
-  }
-  .carousel-caption h1 {
-      font-size: 1.5rem;
-  }
+/* Opcional: Ajusta imágenes al 100% del contenedor */
+.carousel-inner img {
+  width: 100%;
+  height: auto; /* Mantiene proporción */
+  object-fit: cover; /* Cubre el espacio sin deformar (opcional) */
+}
+
+/* Si quieres altura fija para todas las imágenes */
+.carousel-item {
+  height: 500px; /* Ejemplo */
+}
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
 }

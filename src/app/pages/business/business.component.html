@@ -1,2 +1,62 @@
 <app-header></app-header>
+
+<section>
+    <h1>HOLA</h1>
+    <div class="business-container">
+      <section>
+        <select name="" id="">
+            <option value="" disabled selected>Select</option>
+            @for (business of businessService.businesses; track $index) {
+                <option [value]="business.businessName">
+                    {{business.businessName}}
+                </option>
+            }
+        </select>
+      </section>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @for (business of businessService.businesses; track business.businessId) {
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <!-- Imagen del negocio (opcional) -->
+              @if (business.images && business.images[0]) {
+                <img [src]="business.images[0].imageURL" class="card-img-top" [alt]="business.businessName">
+              } @else {
+                <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 150px;">
+                  Sin imagen
+                </div>
+              }
+    
+              <div class="card-body">
+                <h5 class="card-title">{{ business.businessName }}</h5>
+                <p class="card-text">
+                  <i class="bi bi-clock me-2"></i>
+                  <strong>Horario:</strong> {{ business.businessServiceHours }}
+                </p>
+                <p class="card-text">
+                  <i class="bi bi-geo-alt me-2"></i>
+                  <strong>Ubicación:</strong> {{ business.businessLocation }}
+                </p>
+              </div>
+              
+              <div class="card-footer bg-transparent">
+                <small class="text-muted">
+                  @if (business.businessDelivery) {
+                    <span class="badge bg-success me-2">Delivery disponible</span>
+                  }
+                </small>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+
+
+
+
+</section>
+
 <app-footer></app-footer>

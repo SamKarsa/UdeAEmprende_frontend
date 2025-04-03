@@ -1,0 +1,48 @@
+<!-- Contenedor principal con referencia #carousel -->
+<div #carousel id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+  
+    <!-- Indicadores dinámicos -->
+    <div class="carousel-indicators">
+      <button *ngFor="let slide of slides; let i = index" 
+              type="button" 
+              [attr.data-bs-target]="'#homeCarousel'"
+              [attr.data-bs-slide-to]="i"
+              [class.active]="i === 0"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
+    </div>
+  
+    <!-- Slides dinámicos con optimización de carga -->
+    <div class="carousel-inner">
+      <div *ngFor="let slide of slides; let i = index" 
+           class="carousel-item" 
+           [class.active]="i === 0">
+           
+        <img [src]="slide.src" 
+             class="d-block w-100" 
+             [alt]="slide.alt"
+             [loading]="slide.loading"
+             decoding="async">
+      </div>
+    </div>
+  
+    <!-- Controles de navegación -->
+    <button class="carousel-control-prev" 
+            type="button" 
+            data-bs-target="#homeCarousel" 
+            data-bs-slide="prev"
+            (click)="prev()">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    
+    <button class="carousel-control-next" 
+            type="button" 
+            data-bs-target="#homeCarousel" 
+            data-bs-slide="next"
+            (click)="next()">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
