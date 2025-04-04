@@ -24,4 +24,9 @@ export class BusinessService {
   getBusinessById(id: number): Observable<Business> {
     return this.http.get<Business>(`${this.apiURL}/${id}`);
   }
+
+  // Método para obtener negocios por categoría usando el endpoint nuevo
+  getBusinessesByCategory(categoryId: number): Observable<any[]> {
+    return this.http.get<Business[]>(`${this.apiURL}/by-category/${categoryId}`);
+  }
 }
