@@ -12,7 +12,10 @@ import { FormsModule } from '@angular/forms';
 export class HeaderComponent {
   searchQuery: string = '';
 
-  constructor(public categoryService: CategoryService, private router: Router) { }
+  constructor(public categoryService: CategoryService, 
+    private readonly router: Router
+  ) { }
+
   ngOnInit(): void {
     this.getAllCategories();
   }
@@ -30,7 +33,6 @@ export class HeaderComponent {
     })
   }
 
-  // Método para navegar a la página de negocios con el filtro de categoría
   onCategorySelect(categoryId: number) {
     this.router.navigate(['/business'], { 
       queryParams: { category: categoryId } 

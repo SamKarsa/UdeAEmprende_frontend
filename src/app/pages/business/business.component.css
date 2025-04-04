@@ -1,35 +1,54 @@
-.business-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+/* Estilos para la sección de Business */
+
+/* Estilos para las cards */
+.transition-card {
+  transition: all 0.3s ease;
+}
+
+.transition-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ajuste para imágenes dentro de las cards */
+.card-img-wrapper {
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.transition-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Estado de no resultados */
+.no-results {
+  padding: 60px 0;
+  color: #6c757d;
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 767.98px) {
+  .card-img-top, .card-img-top.bg-light {
+    height: 150px !important;
   }
-  
-  .business-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .business-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-header h3 {
-    margin: 0;
-    color: #2c3e50;
-  }
-  
-  .card-body p {
-    margin: 10px 0 0;
-    color: #7f8c8d;
-  }
-  
-  .no-businesses {
-    text-align: center;
-    padding: 20px;
-    color: #7f8c8d;
-  }
+}
+
+/* Estilos para la paginación si la implementas después */
+.pagination .page-item .page-link {
+  color: #198754;
+  border-radius: 50%;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #198754;
+  border-color: #198754;
+}
