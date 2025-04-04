@@ -23,9 +23,13 @@
                     </button>
                     <ul class="dropdown-menu shadow-sm border-0 mt-2">
                         @for(category of categoryService.categories; track $index){
-                        <li><a class="dropdown-item py-2 px-3" href="#">{{category.categoryName}}</a></li>
+                        <li>
+                          <a class="dropdown-item py-2 px-3" 
+                             (click)="onCategorySelect(category.categoryId)">
+                            {{category.categoryName}}
+                          </a>
+                        </li>
                         }
-
                     </ul>
                 </li>
 
@@ -42,15 +46,24 @@
 
             <!-- Búsqueda y botones de sesión -->
             <div class="d-flex align-items-center">
-                <form class="d-flex me-3 position-relative" role="search">
-                    <input class="form-control rounded-pill ps-4 pe-5" type="search"
-                        placeholder="Search for a business..." aria-label="Search">
+                <form class="d-flex me-3 position-relative" role="search" (submit)="onSearch()">
+                    <input 
+                        class="form-control rounded-pill ps-4 pe-5" 
+                        type="search"
+                        placeholder="Search for a business..." 
+                        aria-label="Search"
+                        [(ngModel)]="searchQuery"
+                        name="searchQuery">
+                    <button 
+                        type="submit" 
+                        class="btn btn-link position-absolute end-0 top-50 translate-middle-y me-3">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </form>
 
                 <div class="d-flex gap-2">
                     <a class="btn btn-outline-light rounded-pill px-3 py-2 fw-medium text-nowrap"
-                        routerLink="/log-in">Log
-                        In</a>
+                        routerLink="/log-in">Log In</a>
                     <a class="btn btn-light rounded-pill px-3 py-2 fw-medium text-success text-nowrap"
                         routerLink="/sign-in">Sign In</a>
                 </div>

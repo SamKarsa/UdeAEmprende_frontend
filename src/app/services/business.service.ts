@@ -26,7 +26,11 @@ export class BusinessService {
   }
 
   // Método para obtener negocios por categoría usando el endpoint nuevo
-  getBusinessesByCategory(categoryId: number): Observable<any[]> {
+  getBusinessesByCategory(categoryId: number): Observable<Business[]> {
     return this.http.get<Business[]>(`${this.apiURL}/by-category/${categoryId}`);
+  }
+
+  searchBusinesses(query: string): Observable<Business[]> {
+    return this.http.get<Business[]>(`${this.apiURL}/search?q=${query}`);
   }
 }

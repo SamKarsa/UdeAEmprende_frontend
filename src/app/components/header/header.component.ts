@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  searchQuery: string = '';
 
-  constructor(public categoryService: CategoryService) { }
+  constructor(public categoryService: CategoryService, private router: Router) { }
   ngOnInit(): void {
     this.getAllCategories();
   }
@@ -28,4 +30,18 @@ export class HeaderComponent {
     })
   }
 
+  // Método para navegar a la página de negocios con el filtro de categoría
+  onCategorySelect(categoryId: number) {
+    this.router.navigate(['/business'], { 
+      queryParams: { category: categoryId } 
+    });
+  }
+
+  onSearch() {
+    if (this.searchQuery.trim()) {
+      this.router.navigate(['/business'], {
+        queryParams: { search: this.searchQuery.trim() }
+      });
+    }
+  }
 }
