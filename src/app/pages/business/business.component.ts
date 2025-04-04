@@ -16,7 +16,7 @@ export class BusinessComponent {
 
   constructor(
     public businessService: BusinessService,
-    private route: ActivatedRoute
+    private readonly route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
