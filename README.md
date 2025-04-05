@@ -70,10 +70,8 @@ Se están agregando nuevas funcionalidades y mejoras tanto en frontend como en b
 
 ## 👥 Autores
 
-Samuel López Marín
+- [**Samuel López Marín**](https://github.com/SamKarsa)  
+- [**Alexander Osorio Trespalacios**](https://github.com/AlexOsorio756)  
 
-Alexander Osorio Trespalacios
+Ambos desarrolladores participaron activamente en el diseño y desarrollo del **frontend** y **backend** del sistema Emprende UdeA.
 
-Ambos desarrolladores participaron en la creación del frontend y backend del sistema.
-
-<table> <tr> <td align="center"> <a href="https://github.com/SamKarsa"> <img src="https://via.placeholder.com/100" width="100px;" alt="Samuel López"/> <br /> <sub><b>Samuel López Marín</b></sub> </a> </td> <td align="center"> <a href="#"> <img src="https://via.placeholder.com/100" width="100px;" alt="Alexander Osorio"/> <br /> <sub><b>Alexander Osorio Trespalacios</b></sub> </a> </td> </tr> </table>
