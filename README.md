@@ -10,6 +10,11 @@ Cualquier persona puede explorar los negocios existentes, y quienes tengan un em
 
 ## 🌐 Tecnologías utilizadas
 
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+
+
 - [Angular](https://angular.io/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/)
@@ -39,13 +44,17 @@ git clone https://github.com/TU_USUARIO/NombreDelRepoFrontend.git
 ```
 
 2. Navega al proyecto y descarga las dependencias:
-
+   
+```bash
 cd NombreDelRepoFrontend
 npm install
+```
 
 3. Ejecuta la aplicación en desarrollo:
 
+```bash
 ng serve
+```
 
 4. Abre tu navegador en: http://localhost:4200
 
