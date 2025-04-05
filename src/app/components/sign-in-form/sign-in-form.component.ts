@@ -127,13 +127,17 @@ export class SignInFormComponent implements OnInit {
   }
 
   submitSignInForm() {
-    this.signInForm.value;
+    console.log(this.signInForm.value);
+    if (this.signInForm.invalid) {
+      alert('Please fill in all required fields correctly.');
+      return;
+    }
 
     const formValues = {
       email: this.signInForm.get('email')?.value,
       password: this.signInForm.get('password')?.value,
       firstName: this.signInForm.get('firstName')?.value,
-      lastNames: this.signInForm.get('lastName')?.value,
+      lastName: this.signInForm.get('lastName')?.value,
       documentNumber: this.signInForm.get('documentNumber')?.value,
       phoneNumber: this.signInForm.get('phoneNumber')?.value,
       documentType: this.signInForm.get('documentType')?.value,
@@ -142,10 +146,39 @@ export class SignInFormComponent implements OnInit {
       vulnerability: this.signInForm.get('vulnerability')?.value
     };
 
-    this.postUser();
-    this.postRole(this.createdUserId!);
-    this.postPersonalData(this.createdUserId!, formValues.firstName, formValues.lastNames, formValues.documentNumber, formValues.phoneNumber, formValues.documentType, formValues.ethnicity, formValues.occupation, formValues.vulnerability);
-    this.signInForm.reset();
+
+    this.userService.postUser({
+      email: formValues.email,
+      password: formValues.password,
+      userStatus: true
+    }).subscribe({
+      next: (createdUser) => {
+        if (!createdUser.userId) {
+          throw new Error('The userId is undefined');
+        }
+
+        this.createdUserId = createdUser.userId;
+
+        this.postRole(this.createdUserId);
+        this.postPersonalData(
+          this.createdUserId,
+          formValues.firstName,
+          formValues.lastName,
+          formValues.documentNumber,
+          formValues.phoneNumber,
+          formValues.documentType,
+          formValues.ethnicity,
+          formValues.occupation,
+          formValues.vulnerability
+        );
+
+        this.signInForm.reset();
+      },
+      error: (error) => {
+        console.error('Error with the user creation', error);
+        alert('Error with the user creation ' + error.message);
+      }
+    });
   }
 
   passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
@@ -183,10 +216,8 @@ export class SignInFormComponent implements OnInit {
   postRole(newUserId: number) {
     const userRoleData: Role = {
       userId: newUserId,
-      userTypeId: this.signInForm.get('documentType')?.value
+      userTypeId: 1
     };
-
-    console.log(userRoleData);
 
     this.roleService.postRole(userRoleData).subscribe({
       next: (createdRole) => {
@@ -194,8 +225,8 @@ export class SignInFormComponent implements OnInit {
         console.log(createdRole);
       },
       error: (error) => {
-        alert("Can't get access to api Role" + error);
         console.log(userRoleData);
+        alert("Can't get access to api Role" + error);
       }
     })
 
@@ -218,12 +249,13 @@ export class SignInFormComponent implements OnInit {
 
     this.personalDataService.postPersonalData(personalData).subscribe({
       next: (createdPersonalData) => {
-        console.log("The new role was created");
+        console.log("The personal data was created");
         console.log(createdPersonalData);
       },
       error: (error) => {
-        alert("Can't get access to api personal data " + error);
         console.log(personalData);
+        alert("Can't get access to api personal data " + error);
+
       }
     })
 
