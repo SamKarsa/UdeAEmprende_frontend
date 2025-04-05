@@ -1,59 +1,68 @@
-# UdeAemprende
+# Emprende UdeA - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Este repositorio contiene el frontend del proyecto **Emprende UdeA**, un aplicativo web que funciona como una vitrina digital para visualizar y registrar los diferentes emprendimientos de la Universidad de Antioquia.
 
-## Development server
+Cualquier persona puede explorar los negocios existentes, y quienes tengan un emprendimiento pueden registrarlo fácilmente para que sea visible en la plataforma.
 
-To start a local development server, run:
+👉 Repositorio del backend: [UdeAEmprende_backend](https://github.com/SamKarsa/UdeAEmprende_backend)
+
+---
+
+## 🌐 Tecnologías utilizadas
+
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
+
+---
+
+## 📸 Secciones del sitio
+
+El frontend está dividido en varias páginas y secciones funcionales:
+
+- **Home:** Página principal con introducción al proyecto.
+- **About Us:** Información sobre el propósito de Emprende UdeA.
+- **Negocios:** Listado de emprendimientos en formato de tarjetas (cards).
+- **Detalles del Negocio:** Página con la información detallada del emprendimiento seleccionado.
+- **Registro / Login:** Formularios para autenticación de usuarios.
+- **Datos Personales:** Formulario para capturar información del usuario.
+- **Datos del Negocio:** Formulario para registrar los datos del emprendimiento.
+
+---
+
+## 🛠 Instalación y uso
+
+1. Clona el repositorio:
 
 ```bash
+git clone https://github.com/TU_USUARIO/NombreDelRepoFrontend.git
+```
+
+2. Navega al proyecto y descarga las dependencias:
+
+cd NombreDelRepoFrontend
+npm install
+
+3. Ejecuta la aplicación en desarrollo:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Abre tu navegador en: http://localhost:4200
 
-## Code scaffolding
+## ⚙️ Configuración
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+No se requiere configuración adicional más allá de tener instalado Angular CLI y Node.js. El proyecto está listo para ejecutarse localmente después de instalar los módulos.
 
-```bash
-ng generate component component-name
-```
+## 🚧 Estado del proyecto
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🔧 En desarrollo.
 
-```bash
-ng generate --help
-```
+Se están agregando nuevas funcionalidades y mejoras tanto en frontend como en backend.
 
-## Building
+## 👥 Autores
 
-To build the project run:
+Samuel López Marín
 
-```bash
-ng build
-```
+Alexander Osorio Trespalacios
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ambos desarrolladores participaron en la creación del frontend y backend del sistema.
