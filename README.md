@@ -6,6 +6,7 @@ Cualquier persona puede explorar los negocios existentes, y quienes tengan un em
 
 👉 Repositorio del backend: [UdeAEmprende_backend](https://github.com/SamKarsa/UdeAEmprende_backend)
 
+⚠️ **Nota:** Es necesario tener el backend corriendo previamente para que el frontend funcione correctamente y pueda comunicarse con la API.
 ---
 
 ## 🌐 Tecnologías utilizadas
@@ -40,13 +41,13 @@ El frontend está dividido en varias páginas y secciones funcionales:
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/TU_USUARIO/NombreDelRepoFrontend.git
+https://github.com/SamKarsa/UdeAEmprende_frontend.git
 ```
 
 2. Navega al proyecto y descarga las dependencias:
    
 ```bash
-cd NombreDelRepoFrontend
+cd UdeA_Emprende_frontend
 npm install
 ```
 
