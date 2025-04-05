@@ -11,7 +11,7 @@ import { User } from '../../models/User.model';
 import { RolService } from '../../services/role.service';
 import { Role } from '../../models/Role.model';
 import { PersonalData } from '../../models/PersonalData.model';
-import { formatCurrency } from '@angular/common';
+
 
 @Component({
   selector: 'app-sign-in-form',

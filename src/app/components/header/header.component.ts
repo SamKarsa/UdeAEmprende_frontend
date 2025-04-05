@@ -26,7 +26,7 @@ export class HeaderComponent {
         this.categoryService.categories = data;
       },
       error: (error) => {
-        alert("No se pudo acceder a la api getAllCategories");
+        alert("The getAllCategories API could not be accessed.");
         console.log(error);
       }
 
