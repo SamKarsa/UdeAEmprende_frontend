@@ -4,13 +4,14 @@ import { VulnerabilityService } from '../../services/vulnerability.service';
 import { OccupationService } from '../../services/occupation.service';
 import { DocumentTypeService } from '../../services/document-type.service';
 import { RouterLink } from '@angular/router';
-import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { PersonalDataService } from '../../services/personal-data.service';
 import { User } from '../../models/User.model';
 import { RolService } from '../../services/role.service';
 import { Role } from '../../models/Role.model';
 import { PersonalData } from '../../models/PersonalData.model';
+import { formatCurrency } from '@angular/common';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -32,6 +33,7 @@ export class SignInFormComponent implements OnInit {
   occupation: FormControl;
   documentType: FormControl;
   vulnerability: FormControl;
+  createdUserId: number | undefined;
 
   constructor(public ethnicityService: EthnicityService, public vulnerabilityService: VulnerabilityService, public occupationService: OccupationService, public documentTypeService: DocumentTypeService, public userService: UserService, public roleService: RolService, public personalDataService: PersonalDataService) {
     this.firstName = new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/)]);
@@ -125,8 +127,25 @@ export class SignInFormComponent implements OnInit {
   }
 
   submitSignInForm() {
+    this.signInForm.value;
+
+    const formValues = {
+      email: this.signInForm.get('email')?.value,
+      password: this.signInForm.get('password')?.value,
+      firstName: this.signInForm.get('firstName')?.value,
+      lastNames: this.signInForm.get('lastName')?.value,
+      documentNumber: this.signInForm.get('documentNumber')?.value,
+      phoneNumber: this.signInForm.get('phoneNumber')?.value,
+      documentType: this.signInForm.get('documentType')?.value,
+      ethnicity: this.signInForm.get('ethnicity')?.value,
+      occupation: this.signInForm.get('occupation')?.value,
+      vulnerability: this.signInForm.get('vulnerability')?.value
+    };
+
     this.postUser();
-    // this.signInForm.reset();
+    this.postRole(this.createdUserId!);
+    this.postPersonalData(this.createdUserId!, formValues.firstName, formValues.lastNames, formValues.documentNumber, formValues.phoneNumber, formValues.documentType, formValues.ethnicity, formValues.occupation, formValues.vulnerability);
+    this.signInForm.reset();
   }
 
   passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
@@ -138,9 +157,8 @@ export class SignInFormComponent implements OnInit {
   };
 
 
-
-
   postUser() {
+    console.log(this.signInForm.value);
     const userData: User = {
       email: this.signInForm.get('email')?.value,
       password: this.signInForm.get('password')?.value,
@@ -149,51 +167,51 @@ export class SignInFormComponent implements OnInit {
 
     this.userService.postUser(userData).subscribe({
       next: (createdUser) => {
+        const userId: number = createdUser.userId!;
+        this.createdUserId = userId;
+
         console.log("The new user was created");
-        const userId = createdUser.userId;
-        this.postRole(userId);
       },
       error: (error) => {
         alert("Can't get access to api " + error);
         console.log(userData);
       }
-    })
+    });
 
   }
 
-  postRole(newUserId: number | undefined) {
+  postRole(newUserId: number) {
     const userRoleData: Role = {
       userId: newUserId,
       userTypeId: this.signInForm.get('documentType')?.value
     };
 
-    console.log(newUserId);
+    console.log(userRoleData);
 
     this.roleService.postRole(userRoleData).subscribe({
       next: (createdRole) => {
         console.log("The new role was created");
-        this.postPersonalData(newUserId!);
         console.log(createdRole);
       },
       error: (error) => {
-        alert("Can't get access to api " + error);
+        alert("Can't get access to api Role" + error);
         console.log(userRoleData);
       }
     })
 
   }
 
-  postPersonalData(newUserId: number) {
+  postPersonalData(newUserId: number, newFirstName: string, newLastName: string, newDocumentNumber: string, newPhoneNumber: string, newDocumentTypeId: number, newEthnicityId: number, newOccupationId: number, newVulnerabilityId: number) {
     const personalData: PersonalData = {
-      firstName: this.signInForm.get('firstName')?.value,
-      lastNames: this.signInForm.get('lastName')?.value,
-      identificationNumber: this.signInForm.get('documentNumber')?.value,
-      phoneNumber: this.signInForm.get('phoneNumber')?.value,
+      firstName: newFirstName,
+      lastNames: newLastName,
+      identificationNumber: newDocumentNumber,
+      phoneNumber: newPhoneNumber,
       userId: newUserId,
-      documentTypeId: this.signInForm.get('documentType')?.value,
-      ethnicityId: this.signInForm.get('ethnicity')?.value,
-      occupationId: this.signInForm.get('occupation')?.value,
-      vulnerabilityId: this.signInForm.get('vulnerability')?.value
+      documentTypeId: newDocumentTypeId,
+      ethnicityId: newEthnicityId,
+      occupationId: newOccupationId,
+      vulnerabilityId: newVulnerabilityId
     };
 
     console.log(newUserId);
