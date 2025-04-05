@@ -6,9 +6,15 @@ Cualquier persona puede explorar los negocios existentes, y quienes tengan un em
 
 👉 Repositorio del backend: [UdeAEmprende_backend](https://github.com/SamKarsa/UdeAEmprende_backend)
 
+⚠️ **Nota:** Es necesario tener el backend corriendo previamente para que el frontend funcione correctamente y pueda comunicarse con la API.
+
 ---
 
 ## 🌐 Tecnologías utilizadas
+
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
 
 - [Angular](https://angular.io/)
 - [Bootstrap](https://getbootstrap.com/)
@@ -35,23 +41,31 @@ El frontend está dividido en varias páginas y secciones funcionales:
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/TU_USUARIO/NombreDelRepoFrontend.git
+https://github.com/SamKarsa/UdeAEmprende_frontend.git
 ```
 
 2. Navega al proyecto y descarga las dependencias:
 
-cd NombreDelRepoFrontend
+```bash
+cd UdeA_Emprende_frontend
 npm install
+```
 
 3. Ejecuta la aplicación en desarrollo:
 
+```bash
 ng serve
+```
 
 4. Abre tu navegador en: http://localhost:4200
+
+---
 
 ## ⚙️ Configuración
 
 No se requiere configuración adicional más allá de tener instalado Angular CLI y Node.js. El proyecto está listo para ejecutarse localmente después de instalar los módulos.
+
+---
 
 ## 🚧 Estado del proyecto
 
@@ -59,10 +73,11 @@ No se requiere configuración adicional más allá de tener instalado Angular CL
 
 Se están agregando nuevas funcionalidades y mejoras tanto en frontend como en backend.
 
+---
+
 ## 👥 Autores
 
-Samuel López Marín
+- [**Samuel López Marín**](https://github.com/SamKarsa)
+- [**Alexander Osorio Trespalacios**](https://github.com/AlexOsorio756)
 
-Alexander Osorio Trespalacios
-
-Ambos desarrolladores participaron en la creación del frontend y backend del sistema.
+Ambos desarrolladores participaron activamente en el diseño y desarrollo del **frontend** y **backend** del sistema Emprende UdeA.
