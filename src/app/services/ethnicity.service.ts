@@ -12,7 +12,7 @@ export class EthnicityService {
 
   readonly apiURL = "http://localhost:8080/api/ethnicity";
 
-  constructor(private http: HttpClient) {
+  constructor(private readonly http: HttpClient) {
     this.ethnicities = [];
   }
 

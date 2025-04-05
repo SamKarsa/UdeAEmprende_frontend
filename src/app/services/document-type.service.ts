@@ -11,7 +11,7 @@ export class DocumentTypeService {
 
   readonly apiURL = "http://localhost:8080/api/document-types";
 
-  constructor(private http: HttpClient) {
+  constructor(private readonly http: HttpClient) {
     this.documentTypes = [];
   }
 

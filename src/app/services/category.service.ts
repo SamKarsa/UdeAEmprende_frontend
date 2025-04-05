@@ -11,7 +11,7 @@ export class CategoryService {
 
   readonly apiURL = "http://localhost:8080/api/category";
 
-  constructor(private http: HttpClient) {
+  constructor(private readonly http: HttpClient) {
     this.categories = [];
   }
 
