@@ -7,6 +7,7 @@ Cualquier persona puede explorar los negocios existentes, y quienes tengan un em
 👉 Repositorio del backend: [UdeAEmprende_backend](https://github.com/SamKarsa/UdeAEmprende_backend)
 
 ⚠️ **Nota:** Es necesario tener el backend corriendo previamente para que el frontend funcione correctamente y pueda comunicarse con la API.
+
 ---
 
 ## 🌐 Tecnologías utilizadas
