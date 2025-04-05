@@ -12,7 +12,7 @@ export interface Business {
     businessLocation: string;
     businessPhoneNumber: string;
     businessStatus: boolean;
-    businessCateogries: BusinessCategory[];
+    businessCategories: BusinessCategory[];
     images: Image[];
     socialMedias: SocialMedia[];
     reviews: Review[];
