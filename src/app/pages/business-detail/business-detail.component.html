@@ -68,7 +68,7 @@
         <!-- Reviews -->
         <div class="card border-0 rounded-4 shadow-sm p-3">
           <h5 class="card-title fw-bold mb-3">
-            <i class="bi bi-star me-2 text-success"></i>Reseñas
+            <i class="bi bi-star me-2 text-success"></i>Reviews
           </h5>
           @if (business.reviews && business.reviews.length > 0) {
             <div class="reviews-container">
@@ -100,7 +100,6 @@
           }
         </div>
       </div>
-
 
       <!-- first column (right) -->
       <div class="col-lg-6 mb-5">
@@ -191,12 +190,26 @@
             <div class="d-flex gap-2">
               @for (social of business.socialMedias; track social.socialMediaId) {
                 <a [href]="social.url" target="_blank" 
-                  class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" 
-                  style="width: 60px; height: 60px;">
-                  @if (social.platform === 'WEBSITE') {
-                    <i class="fa-solid fa-globe social-icon"></i>
-                  } @else {
-                    <i [class]="'fa-brands fa-' + social.platform.toLowerCase() + ' social-icon'"></i>
+                   class="social-btn rounded-circle d-flex align-items-center justify-content-center">
+                  @switch (social.platform) {
+                    @case ('FACEBOOK') {
+                      <i class="bi bi-facebook facebook-icon"></i>
+                    }
+                    @case ('INSTAGRAM') {
+                      <i class="bi bi-instagram instagram-icon"></i>
+                    }
+                    @case ('TWITTER') {
+                      <i class="bi bi-twitter-x twitter-icon"></i>
+                    }
+                    @case ('TIKTOK') {
+                      <i class="bi bi-tiktok tiktok-icon"></i>
+                    }
+                    @case ('WHATSAPP') {
+                      <i class="bi bi-whatsapp whatsapp-icon"></i>
+                    }
+                    @case ('WEBSITE') {
+                      <i class="bi bi-globe website-icon"></i>
+                    }
                   }
                 </a>
               }

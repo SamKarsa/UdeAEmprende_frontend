@@ -93,3 +93,41 @@
   align-items: center;
   justify-content: center;
 }
+
+
+
+/* Estilo base para todos los botones */
+.social-btn {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa; /* Fondo gris claro por defecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover */
+.social-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Iconos - Tamaño y colores oficiales */
+.social-btn i {
+  font-size: 2rem; /* 24px */
+}
+
+.facebook-icon { color: #1877F2; } /* Azul Facebook */
+.instagram-icon { color: #E4405F; } /* Rosa Instagram */
+.twitter-icon { color: #000000; } /* Negro Twitter/X */
+.tiktok-icon { color: #010101; } /* Negro TikTok */
+.whatsapp-icon { color: #25D366; } /* Verde WhatsApp */
+.website-icon { color: #0d6efd; } /* Azul Bootstrap (para website) */
+
+/* Efectos hover con colores más intensos */
+.social-btn:hover .facebook-icon { color: #166FE5; }
+.social-btn:hover .instagram-icon { color: #D92D53; }
+.social-btn:hover .twitter-icon { color: #000000; }
+.social-btn:hover .tiktok-icon { color: #EE1D52; } /* Rojo de TikTok al hover */
+.social-btn:hover .whatsapp-icon { color: #128C7E; }
+.social-btn:hover .website-icon { color: #0b5ed7; }
