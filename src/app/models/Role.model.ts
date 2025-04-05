@@ -1,4 +1,4 @@
 export interface Role {
     userId: number | undefined,
-    userTypeId: number
+    userTypeId: number,
 }

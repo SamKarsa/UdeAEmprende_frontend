@@ -1,45 +1,65 @@
 <app-header></app-header>
 
-<main class="p-5">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-      @for (business of businessService.businesses; track business.businessId) {
-        <div class="col">
-          <!-- Envuelve la tarjeta en un routerLink -->
-          <a [routerLink]="['/business', business.businessId]" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm hover-effect">
-              <!-- Resto del contenido de la tarjeta igual que antes -->
+<div class="container py-5">
+  <!-- Encabezado de la sección -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h2 class="fw-bold">Explore Businesses</h2>
+      <p class="text-muted">Discover local entrepreneurs and services in our community</p>
+    </div>
+  </div>
+
+  <!-- Grid de negocios -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @for (business of businessService.businesses; track business.businessId) {
+      <div class="col">
+        <a [routerLink]="['/business', business.businessId]" class="text-decoration-none">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden transition-card">
+            <div class="card-img-wrapper position-relative">
               @if (business.images && business.images[0]) {
-                <img [src]="business.images[0].imageURL" class="card-img-top" [alt]="business.businessName">
+                <img [src]="business.images[0].imageURL" class="card-img-top object-fit-cover" style="height: 180px;" [alt]="business.businessName">
               } @else {
-                <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 150px;">
-                  Sin imagen
+                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 180px;">
+                  <i class="bi bi-image text-secondary" style="font-size: 2rem;"></i>
                 </div>
               }
-              
-              <div class="card-body">
-                <h5 class="card-title">{{ business.businessName }}</h5>
-                <p class="card-text">
-                  <i class="bi bi-clock me-2"></i>
-                  <strong>Horario:</strong> {{ business.businessServiceHours }}
-                </p>
-                <p class="card-text">
-                  <i class="bi bi-geo-alt me-2"></i>
-                  <strong>Ubicación:</strong> {{ business.businessLocation }}
-                </p>
+              @if (business.businessDelivery) {
+                <span class="badge bg-success position-absolute bottom-0 end-0 m-2">
+                  <i class="bi bi-truck me-1"></i> Delivery
+                </span>
+              }
+            </div>
+            
+            <div class="card-body p-3">
+              <h5 class="card-title fw-bold mb-2">{{ business.businessName }}</h5>
+              <div class="d-flex align-items-center mb-2 text-muted small">
+                <i class="bi bi-clock me-2"></i>
+                <span>{{ business.businessServiceHours }}</span>
               </div>
-              
-              <div class="card-footer bg-transparent">
-                <small class="text-muted">
-                  @if (business.businessDelivery) {
-                    <span class="badge bg-success me-2">Delivery disponible</span>
-                  }
-                </small>
+              <div class="d-flex align-items-center text-muted small">
+                <i class="bi bi-geo-alt me-2"></i>
+                <span>{{ business.businessLocation }}</span>
               </div>
             </div>
-          </a>
-        </div>
-      }
+            
+            <div class="card-footer bg-white border-0 p-3">
+              <div class="d-flex justify-content-end">
+                <span class="text-success small fw-medium">
+                  View details <i class="bi bi-arrow-right ms-1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    } @empty {
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-shop display-4 text-muted"></i>
+        <p class="mt-3 mb-0">No businesses found</p>
+        <p class="text-muted small">Try changing your search criteria</p>
+      </div>
+    }
   </div>
-</main>
+</div>
 
 <app-footer></app-footer>

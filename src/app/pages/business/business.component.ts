@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from "../../components/footer/footer.component";
 import { BusinessService } from '../../services/business.service';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,20 +12,65 @@ import { CommonModule } from '@angular/common';
   styleUrl: './business.component.css'
 })
 export class BusinessComponent {
-  constructor(public businessService: BusinessService){}
-    ngOnInit(): void {
-      this.getAllBusinesses();
-    }
+  searchQuery: string = '';
+
+  constructor(
+    public businessService: BusinessService,
+    private readonly route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      const categoryId = params['category'];
+      const searchQuery = params['search']; // Nuevo parámetro
   
-  getAllBusinesses(){
+      if (categoryId) {
+        this.getBusinessesByCategory(categoryId);
+      } else if (searchQuery) {
+        this.searchQuery = searchQuery; // Sincroniza con el campo de búsqueda
+        this.onSearch(); // Ejecuta la búsqueda
+      } else {
+        this.getAllBusinesses();
+      }
+    });
+  }
+
+  getAllBusinesses() {
     this.businessService.getAllBusinesses().subscribe({
+      next: (data) => {
+        this.businessService.businesses = data;
+      },
+      error: (error) => {
+        alert("No se pudo acceder a la API");
+        console.log(error);
+      }
+    });
+  }
+
+  getBusinessesByCategory(categoryId: number) {
+    this.businessService.getBusinessesByCategory(categoryId).subscribe({
+      next: (data) => {
+        this.businessService.businesses = data;
+      },
+      error: (error) => {
+        alert("No se pudo filtrar por categoría");
+        console.log(error);
+      }
+    });
+  }
+
+  onSearch() {
+    if (this.searchQuery.trim()) {
+      this.businessService.searchBusinesses(this.searchQuery).subscribe({
         next: (data) => {
           this.businessService.businesses = data;
         },
         error: (error) => {
-          alert("No se pudo accerder a la API");
-          console.log(error);
+          console.error('Error searching businesses:', error);
         }
-    })
+      });
+    } else {
+      this.getAllBusinesses();
+    }
   }
 }

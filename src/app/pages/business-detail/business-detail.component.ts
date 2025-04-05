@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BusinessService } from '../../services/business.service';
 import { Business } from '../../models/Business.model';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../../components/header/header.component";
 
 
 @Component({
   selector: 'app-business-detail',
-  imports: [ CommonModule],
+  imports: [CommonModule, HeaderComponent, RouterLink],
   templateUrl: './business-detail.component.html',
   styleUrl: './business-detail.component.css'
 })
@@ -17,8 +18,8 @@ export class BusinessDetailComponent implements OnInit{
   error = false;
 
   constructor(
-    private route: ActivatedRoute,
-    private businessService: BusinessService
+    private readonly route: ActivatedRoute,
+    private readonly businessService: BusinessService
   ) {}
 
   ngOnInit() {

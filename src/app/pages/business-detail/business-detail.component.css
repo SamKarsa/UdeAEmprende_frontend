@@ -1,0 +1,96 @@
+/* Estilos para la página de detalles del negocio */
+
+/* Estilo para imágenes */
+.main-image {
+  transition: transform 0.5s ease;
+  min-height: 350px;
+}
+
+.thumbnail-hover {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.thumbnail-hover:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Cursor pointer */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Transiciones para cards */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Estilos para badges */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 1em;
+}
+
+/* Estilos para reseñas */
+.reviews-container {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.reviews-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.reviews-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 10px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+.review-item:last-child {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 991.98px) {
+  .main-image {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main-image {
+    min-height: 200px;
+  }
+}
+
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
+.social-icon {
+  font-size: 2rem; /* 24px - ajusta según necesites */
+  margin-left: 18px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
