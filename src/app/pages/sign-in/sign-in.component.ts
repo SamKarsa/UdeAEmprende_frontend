@@ -4,10 +4,11 @@ import { EthnicityService } from '../../services/ethnicity.service';
 import { VulnerabilityService } from '../../services/vulnerability.service';
 import { OccupationService } from '../../services/occupation.service';
 import { DocumentTypeService } from '../../services/document-type.service';
+import { SignInFormComponent } from '../../components/sign-in-form/sign-in-form.component';
 
 @Component({
   selector: 'app-sign-in',
-  imports: [RouterLink],
+  imports: [SignInFormComponent],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })

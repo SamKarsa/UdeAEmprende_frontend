@@ -12,15 +12,10 @@ import { FormsModule } from '@angular/forms';
 export class HeaderComponent {
   searchQuery: string = '';
 
-  constructor(public categoryService: CategoryService, 
+  constructor(public categoryService: CategoryService,
     private readonly router: Router
   ) { }
 
-<<<<<<< HEAD
-  constructor(public categoryService: CategoryService) {
-  }
-=======
->>>>>>> 4fd6f0c13a724be1f67a5310379ab43cce9bb3fc
   ngOnInit(): void {
     this.getAllCategories();
   }
@@ -39,8 +34,8 @@ export class HeaderComponent {
   }
 
   onCategorySelect(categoryId: number) {
-    this.router.navigate(['/business'], { 
-      queryParams: { category: categoryId } 
+    this.router.navigate(['/business'], {
+      queryParams: { category: categoryId }
     });
   }
 
