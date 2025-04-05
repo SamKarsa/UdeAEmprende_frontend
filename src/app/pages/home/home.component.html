@@ -1,225 +1,239 @@
-<hr>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section class="hero-section bg-light py-5">
-    <div class="container text-center">
-      <h1 class="display-4 mb-3">Descubre los Emprendimientos de la UdeA</h1>
-      <p class="lead mb-4">La vitrina digital donde los negocios universitarios se conectan con toda la comunidad</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="/business" class="btn btn-success btn-lg rounded-pill px-4">Explorar Negocios</a>
-        <a href="/sign-in" class="btn btn-outline-success btn-lg rounded-pill px-4">Publicar mi Negocio</a>
-      </div>
+<!-- Carousel/Slider -->
+<section class="slider-section">
+  <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-</section>
-
-<section class="featured-businesses py-5 bg-light">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Negocios Destacados</h2>
-        <a href="/business" class="btn btn-outline-success rounded-pill">Ver todos</a>
-      </div>
-      
-      <div class="row g-4">
-        <!-- Tarjeta de negocio (repite para cada negocio) -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img src="assets/placeholder-business.jpg" class="card-img-top" alt="Nombre del Negocio" 
-                 style="height: 200px; object-fit: cover;">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <h5 class="card-title">Café UdeA</h5>
-                <span class="badge bg-success">Alimentos</span>
-              </div>
-              <p class="card-text text-muted mb-3">Café de especialidad y productos horneados</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Bloque 12, Primer Piso</small>
-                <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Fin tarjeta de negocio -->
-      </div>
-    </div>
-</section>
-
-<section class="benefits-section py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">¿Por qué publicar tu negocio?</h2>
-      
-      <div class="row g-4">
-        <!-- Beneficio 1 -->
-        <div class="col-12 col-md-4">
-          <div class="benefit-card text-center p-4">
-            <div class="benefit-icon mb-3">
-              <i class="bi bi-graph-up-arrow text-success fs-1"></i>
-            </div>
-            <h4>Mayor Visibilidad</h4>
-            <p>Llega a toda la comunidad universitaria y aumenta el reconocimiento de tu marca.</p>
-          </div>
-        </div>
-        
-        <!-- Beneficio 2 -->
-        <div class="col-12 col-md-4">
-          <div class="benefit-card text-center p-4">
-            <div class="benefit-icon mb-3">
-              <i class="bi bi-people text-success fs-1"></i>
-            </div>
-            <h4>Nuevos Clientes</h4>
-            <p>Conecta con estudiantes, profesores y personal que buscan productos como los tuyos.</p>
-          </div>
-        </div>
-        
-        <!-- Beneficio 3 -->
-        <div class="col-12 col-md-4">
-          <div class="benefit-card text-center p-4">
-            <div class="benefit-icon mb-3">
-              <i class="bi bi-star text-success fs-1"></i>
-            </div>
-            <h4>Credibilidad</h4>
-            <p>Forma parte de una plataforma oficial reconocida por la comunidad universitaria.</p>
+    
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-overlay"></div>
+        <img src="assets/slider_home/photo1.webp" class="d-block w-100" alt="Emprendedores UdeA">
+        <div class="carousel-caption">
+          <h2 class="display-4 fw-bold text-white mb-3">Discover UdeA's Ventures</h2>
+          <p class="lead mb-4">The digital showcase where university businesses connect with the entire community</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="/business" class="btn btn-success btn-lg rounded-pill px-4">Explore Business</a>
+            <a href="/sign-in" class="btn btn-outline-light btn-lg rounded-pill px-4"> Publish My Business</a>
           </div>
         </div>
       </div>
       
-      <div class="text-center mt-5">
-        <a href="/sign-in" class="btn btn-success btn-lg rounded-pill px-5">Publicar mi Negocio</a>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-overlay"></div>
+        <img src="assets/slider_home/photo2.webp" class="d-block w-100" alt="Categorías de Negocios">
+        <div class="carousel-caption">
+          <h2 class="display-4 fw-bold text-white mb-3">Browse by Categories</h2>
+          <p class="lead mb-4">Easily find the product or service you're looking for</p>
+          <a href="/business" class="btn btn-success btn-lg rounded-pill px-4">Explore Categories</a>
+        </div>
       </div>
-    </div>
-</section>
-
-<section class="stats-section py-5 bg-success text-white">
-    <div class="container">
-      <div class="row text-center g-4">
-        <!-- Estadística 1 -->
-        <div class="col-6 col-md-3">
-          <div class="stat-card p-3">
-            <h2 class="stat-number display-4">150+</h2>
-            <p class="stat-label mb-0">Negocios Registrados</p>
-          </div>
-        </div>
-        
-        <!-- Estadística 2 -->
-        <div class="col-6 col-md-3">
-          <div class="stat-card p-3">
-            <h2 class="stat-number display-4">15</h2>
-            <p class="stat-label mb-0">Categorías</p>
-          </div>
-        </div>
-        
-        <!-- Estadística 3 -->
-        <div class="col-6 col-md-3">
-          <div class="stat-card p-3">
-            <h2 class="stat-number display-4">3,000+</h2>
-            <p class="stat-label mb-0">Usuarios Mensuales</p>
-          </div>
-        </div>
-        
-        <!-- Estadística 4 -->
-        <div class="col-6 col-md-3">
-          <div class="stat-card p-3">
-            <h2 class="stat-number display-4">98%</h2>
-            <p class="stat-label mb-0">Satisfacción</p>
-          </div>
+      
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-overlay"></div>
+        <img src="assets/slider_home/photo3.webp" class="d-block w-100" alt="Publica tu Negocio">
+        <div class="carousel-caption">
+          <h2 class="display-4 fw-bold text-white mb-3">Have a Business?</h2>
+          <p class="lead mb-4">Increase your visibility and connect with new customers within the UdeA community.</p>
+          <a href="/sign-in" class="btn btn-success btn-lg rounded-pill px-4">Register Your Venture</a>
         </div>
       </div>
     </div>
+    
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </section>
 
-<section class="cta-section py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8 mb-4 mb-lg-0">
-          <h2>¿Listo para mostrar tu negocio al mundo?</h2>
-          <p class="lead mb-0">Únete a la comunidad de emprendedores de la UdeA y haz crecer tu negocio</p>
+<!-- Sección de Beneficios (Rediseñada) -->
+<section class="benefits-section bg-light section">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2 class="fw-bold">¿Por qué publicar tu negocio?</h2>
+        <div class="divider mx-auto my-3"></div>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Beneficio 1 -->
+      <div class="col-md-4">
+        <div class="benefit-card text-center p-4 rounded-4 shadow-sm hover-effect">
+          <div class="icon-circle bg-success-light mx-auto mb-3">
+            <i class="bi bi-graph-up-arrow text-success fs-3"></i>
+          </div>
+          <h4 class="mb-3">Mayor Visibilidad</h4>
+          <p class="text-muted mb-0">Llega a toda la comunidad universitaria y aumenta el reconocimiento de tu marca.</p>
         </div>
-        <div class="col-lg-4 text-lg-end">
-          <a href="/sign-in" class="btn btn-success btn-lg rounded-pill px-4">Registra tu Negocio Ahora</a>
+      </div>
+      
+      <!-- Beneficio 2 -->
+      <div class="col-md-4">
+        <div class="benefit-card text-center p-4 rounded-4 shadow-sm hover-effect">
+          <div class="icon-circle bg-success-light mx-auto mb-3">
+            <i class="bi bi-people text-success fs-3"></i>
+          </div>
+          <h4 class="mb-3">Nuevos Clientes</h4>
+          <p class="text-muted mb-0">Conecta con estudiantes, profesores y personal que buscan productos como los tuyos.</p>
+        </div>
+      </div>
+      
+      <!-- Beneficio 3 -->
+      <div class="col-md-4">
+        <div class="benefit-card text-center p-4 rounded-4 shadow-sm hover-effect">
+          <div class="icon-circle bg-success-light mx-auto mb-3">
+            <i class="bi bi-star text-success fs-3"></i>
+          </div>
+          <h4 class="mb-3">Credibilidad</h4>
+          <p class="text-muted mb-0">Forma parte de una plataforma oficial reconocida por la comunidad universitaria.</p>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
-<!-- Sección de categorías destacadas -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Explora por categorías</h2>
-            <p class="text-muted">Encuentra negocios por tu interés</p>
+<!-- Sección de Estadísticas (Nueva) -->
+<section class="stats-section bg-success text-white py-5">
+  <div class="container">
+    <div class="row text-center g-4">
+      <!-- Estadística 1 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number display-4">500+</div>
+          <div class="stat-label">Negocios</div>
         </div>
-        
-        <div class="row g-4">
-            @for(category of categoryService.categories; track $index) {
-            <div class="col-md-4 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-effect">
-                    <div class="card-body text-center">
-                        <div class="icon-circle bg-success-light mb-3 mx-auto">
-                            <i class="bi bi-cup-hot-fill text-success fs-4"></i>
-                        </div>
-                        <h5 class="card-title">{{category.categoryName}}</h5>
-                        <a href="#" class="stretched-link">
-                            <span class="visually-hidden">Learn more about {{category.categoryName}}</span>
-                        </a>
-                    </div>
-                </div>
+      </div>
+      
+      <!-- Estadística 2 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number display-4">20+</div>
+          <div class="stat-label">Categorías</div>
+        </div>
+      </div>
+      
+      <!-- Estadística 3 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number display-4">5K+</div>
+          <div class="stat-label">Usuarios</div>
+        </div>
+      </div>
+      
+      <!-- Estadística 4 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number display-4">98%</div>
+          <div class="stat-label">Satisfacción</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Testimonios (Nueva) -->
+<section class="testimonials-section section">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2 class="fw-bold">Lo que dicen nuestros emprendedores</h2>
+        <div class="divider mx-auto my-3"></div>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Testimonio 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 hover-effect">
+          <div class="d-flex align-items-center mb-3">
+            <div class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
             </div>
-            }
+          </div>
+          <p class="card-text mb-4">"Gracias a esta plataforma, mi negocio de diseño gráfico ha aumentado sus ventas en un 60% en los últimos tres meses."</p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <span class="fw-bold">MC</span>
+            </div>
+            <div class="ms-3">
+              <h6 class="mb-0">María Cardona</h6>
+              <small class="text-muted">Diseño Gráfico, Facultad de Artes</small>
+            </div>
+          </div>
         </div>
-        
-        <div class="text-center mt-4">
-            <a href="#" class="btn btn-outline-success">Ver todas las categorías</a>
+      </div>
+      
+      <!-- Testimonio 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 hover-effect">
+          <div class="d-flex align-items-center mb-3">
+            <div class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <p class="card-text mb-4">"La visibilidad que he conseguido es increíble. La comunidad universitaria ha sido nuestro principal apoyo para crecer."</p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <span class="fw-bold">JP</span>
+            </div>
+            <div class="ms-3">
+              <h6 class="mb-0">Juan Pérez</h6>
+              <small class="text-muted">Tech Solutions, Ingeniería</small>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      <!-- Testimonio 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 hover-effect">
+          <div class="d-flex align-items-center mb-3">
+            <div class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+          </div>
+          <p class="card-text mb-4">"El proceso de registro fue muy sencillo y rápidamente empecé a recibir contactos de clientes interesados en mis productos."</p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <span class="fw-bold">AM</span>
+            </div>
+            <div class="ms-3">
+              <h6 class="mb-0">Ana Martínez</h6>
+              <small class="text-muted">Alimentos Saludables, Nutrición</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Testimonios -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Lo que dicen nuestros usuarios</h2>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="d-flex mb-3">
-                            <img src="assets/testimonials/user1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Usuario">
-                            <div>
-                                <h6 class="mb-0">María Gómez</h6>
-                                <small class="text-muted">Estudiante de Medicina</small>
-                            </div>
-                        </div>
-                        <p class="card-text">"Gracias a UdeAemprende encontré lugares increíbles para comer cerca de la universidad que no conocía."</p>
-                        <div class="text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Más testimonios... -->
-        </div>
-    </div>
-</section>
+
+
+
