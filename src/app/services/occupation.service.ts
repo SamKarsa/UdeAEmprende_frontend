@@ -11,7 +11,7 @@ export class OccupationService {
 
   readonly apiURL = "http://localhost:8080/api/occupations";
 
-  constructor(private http: HttpClient) {
+  constructor(private readonly http: HttpClient) {
     this.occupations = [];
   }
 

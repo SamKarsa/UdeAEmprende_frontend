@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { SignInFormComponent } from '../../components/sign-in-form/sign-in-form.component';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { EthnicityService } from '../../services/ethnicity.service';
+import { VulnerabilityService } from '../../services/vulnerability.service';
+import { OccupationService } from '../../services/occupation.service';
+import { DocumentTypeService } from '../../services/document-type.service';
+
 @Component({
   selector: 'app-sign-in',
-  imports: [HeaderComponent, FooterComponent, SignInFormComponent],
+  imports: [RouterLink],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })

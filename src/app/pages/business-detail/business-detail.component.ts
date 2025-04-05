@@ -3,12 +3,11 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BusinessService } from '../../services/business.service';
 import { Business } from '../../models/Business.model';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from "../../components/header/header.component";
 
 
 @Component({
   selector: 'app-business-detail',
-  imports: [CommonModule, HeaderComponent, RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './business-detail.component.html',
   styleUrl: './business-detail.component.css'
 })

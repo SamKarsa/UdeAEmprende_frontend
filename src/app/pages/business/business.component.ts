@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from "../../components/footer/footer.component";
 import { BusinessService } from '../../services/business.service';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-business',
-  imports: [HeaderComponent, FooterComponent, RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './business.component.html',
   styleUrl: './business.component.css'
 })

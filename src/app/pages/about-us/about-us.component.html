@@ -1,5 +1,3 @@
-<app-header></app-header>
-
 <!-- Hero Section -->
 <section class="bg-light py-5">
   <div class="container">
@@ -30,10 +28,11 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-4 position-relative bg-success-subtle d-flex align-items-center justify-content-center p-4">
+        <div class="col-lg-4 p-0 position-relative"> <!-- Eliminamos bg-success-subtle y añadimos p-0 -->
           <img
             src="https://udea.edu.co/wps/wcm/connect/udea/657a4b31-1d95-471a-aa3f-fbec87e47fe9/1/Acreditaci%C3%B3n+principal.jpg?MOD=AJPERES"
-            alt="UdeA Emprende" class="img-fluid rounded-3 shadow">
+            alt="UdeA Emprende" 
+            class="w-100 h-100 object-fit-cover"> <!-- Nuevas clases aquí -->
         </div>
       </div>
     </div>
@@ -45,10 +44,11 @@
   <div class="container">
     <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
       <div class="row g-0">
-        <div class="col-lg-4 position-relative bg-success-subtle d-flex align-items-center justify-content-center p-4">
+        <div class="col-lg-4 p-0 position-relative"> <!-- Cambios aquí -->
           <img
-            src="https://udea.edu.co/wps/wcm/connect/udea/657a4b31-1d95-471a-aa3f-fbec87e47fe9/1/Acreditaci%C3%B3n+principal.jpg?MOD=AJPERES"
-            alt="UdeA Emprende Servicios" class="img-fluid rounded-3 shadow">
+            src="https://images.unsplash.com/photo-1615321771528-1426355a8927?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="UdeA Emprende Servicios" 
+            class="w-100 h-100 object-fit-cover"> <!-- Cambios aquí -->
         </div>
         <div class="col-lg-8">
           <div class="card-body p-4 p-lg-5">
@@ -67,6 +67,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- History Section -->
 <section class="py-5">
@@ -89,10 +90,11 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-4 position-relative bg-success-subtle d-flex align-items-center justify-content-center p-4">
+        <div class="col-lg-4 p-0 position-relative"> <!-- Cambios clave aquí -->
           <img
-            src="https://udea.edu.co/wps/wcm/connect/udea/657a4b31-1d95-471a-aa3f-fbec87e47fe9/1/Acreditaci%C3%B3n+principal.jpg?MOD=AJPERES"
-            alt="Historia UdeA Emprende" class="img-fluid rounded-3 shadow">
+            src="https://images.unsplash.com/photo-1695886517917-348d9e1059e7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Historia UdeA Emprende" 
+            class="w-100 h-100 object-fit-cover"> <!-- Clases modificadas -->
         </div>
       </div>
     </div>
@@ -112,20 +114,19 @@
       <!-- Team Member 1 -->
       <div class="col-lg-6">
         <div class="card border-0 shadow-sm rounded-4 h-100">
-          <div class="row g-0">
-            <div class="col-md-4 bg-success-subtle d-flex align-items-center justify-content-center p-3">
+          <div class="row g-0 h-100"> <!-- Añadido h-100 aquí -->
+            <div class="col-md-4 p-0 position-relative overflow-hidden"> <!-- Modificado -->
               <img
-                src="https://udea.edu.co/wps/wcm/connect/udea/657a4b31-1d95-471a-aa3f-fbec87e47fe9/1/Acreditaci%C3%B3n+principal.jpg?MOD=AJPERES"
-                alt="Samuel López" class="img-fluid rounded-circle shadow" style="max-width: 150px;">
+                src="https://i.pinimg.com/736x/c4/42/01/c44201324e4ec8a9a302682f3e21a1aa.jpg"
+                alt="Samuel López" 
+                class="w-100 h-100 object-fit-cover rounded-4"> <!-- Modificado -->
             </div>
             <div class="col-md-8">
               <div class="card-body p-4">
                 <h3 class="fs-4 fw-bold mb-2">Samuel López</h3>
-                <p class="text-success mb-3">DevOps Machine lerning full stack teacher Developer</p>
+                <p class="text-success mb-3">Frontend Developer & UI/UX Specialist</p>
                 <p class="fs-6 text-secondary">
-                  User experience specialist focused on intuitive and accessible designs.
-                  Responsible for creating a user-friendly, attractive, and visually appealing
-                  interface that improves overall usability and accessibility for all users.
+                  Passionate about user experience, I was mainly responsible for designing and developing the interface, ensuring it was intuitive, visually appealing, and accessible to all users. Although I initially worked briefly on the backend —specifically on building models— my greatest contribution was on the frontend, where I focused on creating a solid and functional visual experience.
                 </p>
               </div>
             </div>
@@ -136,21 +137,19 @@
       <!-- Team Member 2 -->
       <div class="col-lg-6">
         <div class="card border-0 shadow-sm rounded-4 h-100">
-          <div class="row g-0">
-            <div class="col-md-4 bg-success-subtle d-flex align-items-center justify-content-center p-3">
+          <div class="row g-0 h-100"> <!-- Añadido h-100 aquí -->
+            <div class="col-md-4 p-0 position-relative overflow-hidden"> <!-- Modificado -->
               <img
-                src="https://udea.edu.co/wps/wcm/connect/udea/657a4b31-1d95-471a-aa3f-fbec87e47fe9/1/Acreditaci%C3%B3n+principal.jpg?MOD=AJPERES"
-                alt="Alexander" class="img-fluid rounded-circle shadow" style="max-width: 150px;">
+                src="https://i.pinimg.com/736x/ff/49/bd/ff49bd430cd946e5e74f9fbfcdd69fd8.jpg"
+                alt="Alexander" 
+                class="w-100 h-100 object-fit-cover rounded-4"> <!-- Modificado -->
             </div>
             <div class="col-md-8">
               <div class="card-body p-4">
-                <h3 class="fs-4 fw-bold mb-2">Alexander</h3>
-                <p class="text-success mb-3">Bugro Developer</p>
+                <h3 class="fs-4 fw-bold mb-2">Alexander Osorio</h3>
+                <p class="text-success mb-3">Backend Developer & System Integrator</p>
                 <p class="fs-6 text-secondary">
-                  User experience specialist with a focus on intuitive and accessible designs.
-                  Responsible for developing a user-friendly, visually appealing, and engaging
-                  interface that ensures seamless interaction and accessibility for all users
-                  hububyubiybuibiybuibuiybuyiyubyubiyu.
+                  Backend development specialist with a focus on system architecture and logic. Although I initially contributed to the frontend, my main work focused on building and optimizing the database, services, and business logic, ensuring a robust and efficient structure for the platform's operation.
                 </p>
               </div>
             </div>
@@ -160,4 +159,3 @@
     </div>
   </div>
 </section>
-<app-footer></app-footer>
