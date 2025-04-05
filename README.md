@@ -75,3 +75,5 @@ Samuel López Marín
 Alexander Osorio Trespalacios
 
 Ambos desarrolladores participaron en la creación del frontend y backend del sistema.
+
+<table> <tr> <td align="center"> <a href="https://github.com/SamKarsa"> <img src="https://via.placeholder.com/100" width="100px;" alt="Samuel López"/> <br /> <sub><b>Samuel López Marín</b></sub> </a> </td> <td align="center"> <a href="#"> <img src="https://via.placeholder.com/100" width="100px;" alt="Alexander Osorio"/> <br /> <sub><b>Alexander Osorio Trespalacios</b></sub> </a> </td> </tr> </table>
