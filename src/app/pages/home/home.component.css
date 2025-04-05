@@ -1,121 +1,224 @@
-/* Estilos para todas las nuevas secciones */
-
-/* Tarjeta de categoría */
-.category-card {
-    transition: all 0.3s ease;
-    background-color: white;
-    border: 1px solid #e9ecef;
-  }
-  
-  .category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-    border-color: #198754;
-  }
-  
-  .category-icon {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Tarjetas de negocios */
-  .card {
-    transition: all 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-  }
-  
-  /* Beneficios */
-  .benefit-card {
-    height: 100%;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    background-color: white;
-    border: 1px solid #e9ecef;
-  }
-  
-  .benefit-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-color: #198754;
-  }
-  
-  /* Estadísticas */
-  .stat-number {
-    font-weight: 700;
-    margin-bottom: 5px;
-  }
-  
-  .stat-label {
-    opacity: 0.9;
-    font-weight: 300;
-  }
-  
-  /* Mejoras para móviles */
-  @media (max-width: 767.98px) {
-    .display-4 {
-      font-size: 2.5rem;
-    }
-    
-    .hero-section {
-      padding: 3rem 0;
-    }
-    
-    .stat-number {
-      font-size: 2.5rem;
-    }
-  }
-
-
-  /* Efecto hover para tarjetas */
-.hover-effect {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* SLIDER STYLES */
+.slider-section {
+  margin-top: -1px; /* Eliminates space between header and slider */
 }
-.hover-effect:hover {
+
+.carousel-item {
+  height: 600px;
+  position: relative;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-indicators {
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.carousel-indicators button.active {
+  background-color: #28a745;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(40, 167, 69, 0.6);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 50% 50%;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* BENEFITS SECTION */
+.benefits-section {
+  background-color: #f8f9fa;
+}
+
+.benefit-card {
+  height: 100%;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+}
+
+.benefit-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #198754;
 }
 
-/* Iconos circulares */
 .icon-circle {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
+
 .bg-success-light {
-  background-color: rgba(25, 135, 84, 0.1);
+  background-color: rgba(40, 167, 69, 0.1);
 }
 
-
-
-
-/*CAROUSEL*/
-
-/* Asegura que el slider ocupe un tamaño específico */
-#carouselExampleIndicators {
-  max-height: 600px; /* Ajusta según necesidad */
-  overflow: hidden;
+.benefit-card:hover .icon-circle {
+  background-color: rgba(40, 167, 69, 0.2);
+  transform: scale(1.1);
 }
 
-/* Opcional: Ajusta imágenes al 100% del contenedor */
-.carousel-inner img {
-  width: 100%;
-  height: auto; /* Mantiene proporción */
-  object-fit: cover; /* Cubre el espacio sin deformar (opcional) */
+.divider {
+  width: 50px;
+  height: 3px;
+  background-color: #28a745;
+  border-radius: 50px;
 }
 
-/* Si quieres altura fija para todas las imágenes */
-.carousel-item {
-  height: 500px; /* Ejemplo */
+/* STATS SECTION */
+.stats-section {
+  background-color: #28a745;
+  background-image: linear-gradient(135deg, #28a745 0%, #20c997 100%);
 }
-.carousel-item img {
-  height: 100%;
-  object-fit: cover;
+
+.stat-number {
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials-section .card {
+  position: relative;
+  border: none;
+  border-radius: 1rem;
+}
+
+.testimonials-section .card::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5rem;
+  color: rgba(40, 167, 69, 0.1);
+  line-height: 0;
+}
+
+/* HOVER EFFECTS */
+.hover-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 992px) {
+  .carousel-item {
+    height: 500px;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 400px;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 2rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item {
+    height: 350px;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 1.75rem;
+  }
+  
+  .carousel-caption .d-flex {
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .stat-number {
+    font-size: 2rem !important;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* ESPACIADO ENTRE SECCIONES */
+.section{
+  padding: 6rem 0;
 }

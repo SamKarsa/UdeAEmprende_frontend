@@ -1,59 +1,83 @@
-# UdeAemprende
+# Emprende UdeA - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Este repositorio contiene el frontend del proyecto **Emprende UdeA**, un aplicativo web que funciona como una vitrina digital para visualizar y registrar los diferentes emprendimientos de la Universidad de Antioquia.
 
-## Development server
+Cualquier persona puede explorar los negocios existentes, y quienes tengan un emprendimiento pueden registrarlo fácilmente para que sea visible en la plataforma.
 
-To start a local development server, run:
+👉 Repositorio del backend: [UdeAEmprende_backend](https://github.com/SamKarsa/UdeAEmprende_backend)
+
+⚠️ **Nota:** Es necesario tener el backend corriendo previamente para que el frontend funcione correctamente y pueda comunicarse con la API.
+
+---
+
+## 🌐 Tecnologías utilizadas
+
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
+
+---
+
+## 📸 Secciones del sitio
+
+El frontend está dividido en varias páginas y secciones funcionales:
+
+- **Home:** Página principal con introducción al proyecto.
+- **About Us:** Información sobre el propósito de Emprende UdeA.
+- **Negocios:** Listado de emprendimientos en formato de tarjetas (cards).
+- **Detalles del Negocio:** Página con la información detallada del emprendimiento seleccionado.
+- **Registro / Login:** Formularios para autenticación de usuarios.
+- **Datos Personales:** Formulario para capturar información del usuario.
+- **Datos del Negocio:** Formulario para registrar los datos del emprendimiento.
+
+---
+
+## 🛠 Instalación y uso
+
+1. Clona el repositorio:
+
+```bash
+https://github.com/SamKarsa/UdeAEmprende_frontend.git
+```
+
+2. Navega al proyecto y descarga las dependencias:
+
+```bash
+cd UdeA_Emprende_frontend
+npm install
+```
+
+3. Ejecuta la aplicación en desarrollo:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Abre tu navegador en: http://localhost:4200
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ⚙️ Configuración
 
-```bash
-ng generate component component-name
-```
+No se requiere configuración adicional más allá de tener instalado Angular CLI y Node.js. El proyecto está listo para ejecutarse localmente después de instalar los módulos.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🚧 Estado del proyecto
 
-## Building
+### 🔧 En desarrollo.
 
-To build the project run:
+Se están agregando nuevas funcionalidades y mejoras tanto en frontend como en backend.
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 👥 Autores
 
-## Running unit tests
+- [**Samuel López Marín**](https://github.com/SamKarsa)
+- [**Alexander Osorio Trespalacios**](https://github.com/AlexOsorio756)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ambos desarrolladores participaron activamente en el diseño y desarrollo del **frontend** y **backend** del sistema Emprende UdeA.
