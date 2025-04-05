@@ -60,15 +60,21 @@ ng serve
 
 4. Abre tu navegador en: http://localhost:4200
 
+---
+
 ## ⚙️ Configuración
 
 No se requiere configuración adicional más allá de tener instalado Angular CLI y Node.js. El proyecto está listo para ejecutarse localmente después de instalar los módulos.
+
+---
 
 ## 🚧 Estado del proyecto
 
 ### 🔧 En desarrollo.
 
 Se están agregando nuevas funcionalidades y mejoras tanto en frontend como en backend.
+
+---
 
 ## 👥 Autores
 
