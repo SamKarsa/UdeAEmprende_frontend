@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { PersonalData } from '../models/PersonalData.model';
 
 @Injectable({
@@ -8,9 +9,13 @@ import { PersonalData } from '../models/PersonalData.model';
 export class PersonalDataService {
   readonly personalDataApiURL = "http://localhost:8080/api/personal-data";
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   postPersonalData(personalData: PersonalData) {
     return this.http.post<PersonalData>(this.personalDataApiURL, personalData);
+  }
+
+  getPersonalDataByUserId(userId: number): Observable<any> {
+    return this.http.get(`${this.personalDataApiURL}/user/${userId}`); 
   }
 }

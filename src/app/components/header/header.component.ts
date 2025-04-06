@@ -3,6 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { PersonalDataService } from '../../services/personal-data.service';
 
 @Component({
   selector: 'app-header',
@@ -14,9 +15,11 @@ export class HeaderComponent {
   searchQuery: string = '';
   isLoggedIn: boolean = false;
   userEmail: string | null = null;
+  userName: string = '';
 
   constructor(public categoryService: CategoryService,
-    private readonly router: Router
+    private readonly router: Router,
+    private readonly personalDataService: PersonalDataService
   ) { }
 
   ngOnInit(): void {
@@ -31,7 +34,20 @@ export class HeaderComponent {
       const user = JSON.parse(userData);
       this.isLoggedIn = user.userStatus; // We use userStatus to validate
       this.userEmail = user.email; // We save the email to show it
+      this.fetchFirstName(user.userId);
     }
+  }
+
+  fetchFirstName(userId: number): void {
+    this.personalDataService.getPersonalDataByUserId(userId).subscribe({
+      next: (personalData) => {
+        this.userName = personalData.firstName; 
+      },
+      error: (error) => {
+        console.error('Error fetching name:', error);
+        this.userName = 'Usuario'; 
+      }
+    });
   }
 
   // Log Out
