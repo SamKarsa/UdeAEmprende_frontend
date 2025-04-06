@@ -18,4 +18,8 @@ export class PersonalDataService {
   getPersonalDataByUserId(userId: number): Observable<any> {
     return this.http.get(`${this.personalDataApiURL}/user/${userId}`); 
   }
+
+  getPersonalDataById(id: number): Observable<PersonalData> {
+    return this.http.get<PersonalData>(`${this.personalDataApiURL}/${id}`);
+  }
 }

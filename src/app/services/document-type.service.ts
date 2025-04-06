@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DocumentType } from '../models/DocumentType.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,4 +19,9 @@ export class DocumentTypeService {
   getAllDocumentTypes() {
     return this.http.get<DocumentType[]>(this.apiURL);
   }
+
+  getDocumentTypeById(id: number): Observable<DocumentType> {
+    return this.http.get<DocumentType>(`${this.apiURL}/${id}`)
+  }
+
 }

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class UserService {
   readonly userApiURL = "http://localhost:8080/api/user";
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   postUser(user: User) {
     return this.http.post<User>(this.userApiURL, user);

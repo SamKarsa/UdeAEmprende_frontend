@@ -12,12 +12,11 @@
                 </div>
             </div>
             <div>
-                <h3 class="mb-1">Alexander Osorio <span class="text-muted">(Alexxx)</span></h3>
+                <h3 class="mb-1">Alexander Osorio</h3>
                 <p class="text-muted mb-0">Student</p>
             </div>
         </div>
     
-        <!-- Botón de retroceso - Añadido align-self-center -->
         <button class="btn btn-outline-secondary btn-back d-flex align-items-center align-self-center">
             <i class="bi bi-arrow-left me-2"></i> Back
         </button>
@@ -33,13 +32,13 @@
             <div class="col-md-6">
                 <!-- First Name -->
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="first-name" placeholder="" value="Alexander">
+                    <input type="text" class="form-control" id="firstName" [value]="personalData?.firstName" readonly>
                     <label for="first-name">First Name</label>
                 </div>
 
                 <!-- Document Type -->
                 <div class="form-floating mb-3">
-                    <select class="form-select" id="document-type">
+                    <select class="form-select" id="documentTypeId">
                         <option selected disabled>Select document type</option>
                         <option>Citizenship Card</option>
                         <option>Passport</option>
@@ -49,13 +48,13 @@
 
                 <!-- Phone Number -->
                 <div class="form-floating mb-3">
-                    <input type="tel" class="form-control" id="phone-number" placeholder="" value="3137444865">
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="" value="">
                     <label for="phone-number">Phone Number</label>
                 </div>
 
                 <!-- Ethnicity -->
                 <div class="form-floating mb-3">
-                    <select class="form-select" id="ethnicity">
+                    <select class="form-select" id="ethnicityId">
                         <option selected disabled>Select ethnicity</option>
                         <option>African descendant</option>
                         <option>Indigenous</option>
@@ -70,19 +69,19 @@
             <div class="col-md-6">
                 <!-- Last Names -->
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="last-name" placeholder="" value="Osorio Trespalacios">
+                    <input type="text" class="form-control" id="lastNames" placeholder="" value="">
                     <label for="last-name">Last Name</label>
                 </div>
 
                  <!-- Document Number -->
                 <div class="form-floating mb-3">
-                    <input type="tel" class="form-control" id="document-number" placeholder="" value="1022145229">
+                    <input type="tel" class="form-control" id="identificationNumber" placeholder="" value="">
                     <label for="document-number">Document Number</label>
                 </div>
 
                 <!-- Occupation -->
                 <div class="form-floating mb-3">
-                    <select class="form-select" id="occupation">
+                    <select class="form-select" id="occupationId">
                         <option selected disabled>Select occupation</option>
                         <option>Student</option>
                         <option>Developer</option>
@@ -98,7 +97,7 @@
                         <option>Visual Impairment</option>
                         <option>None</option>
                     </select>
-                    <label for="vulnerability">Vulnerability</label>
+                    <label for="vulnerability">vulnerabilityId</label>
                 </div>
             </div>
         </fieldset>
@@ -111,7 +110,7 @@
             <div class="col-md-6">
                 <!-- Email -->
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="" value="Alexander@gmail.com" disabled>
+                    <input type="email" class="form-control" id="email" placeholder="" value="" disabled>
                     <label for="email">Email Address</label>
                 </div>
 
@@ -194,4 +193,7 @@
         </fieldset>
     </form>
 </section>
-    
+
+
+
+

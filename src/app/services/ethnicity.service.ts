@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Ethnicity } from '../models/Ethnicity.model';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -18,6 +19,11 @@ export class EthnicityService {
 
   getAllEthnicities() {
     return this.http.get<Ethnicity[]>(this.apiURL);
+  }
+
+
+  getEthnicityById(id: number): Observable<Ethnicity> {
+    return this.http.get<Ethnicity>(`${this.apiURL}/${id}`)
   }
 
 }
