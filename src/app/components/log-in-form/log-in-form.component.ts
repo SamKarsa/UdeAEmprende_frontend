@@ -54,7 +54,7 @@ export class LogInFormComponent implements OnInit {
             userStatus: createdUser.userStatus
           })
           );
-          this.router.navigate(['/']);
+          window.location.href = '/';
         }
       },
       error: (error) => {
