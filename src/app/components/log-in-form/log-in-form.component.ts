@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UserService } from '../../services/user.service';
 import { Router, RouterLink } from '@angular/router';
 import { UserLogInSesion } from '../../models/UserLogInSesion.model';
 import { UserLogInSesionService } from '../../services/user-log-in-sesion.service';
@@ -18,7 +17,7 @@ export class LogInFormComponent implements OnInit {
   email: FormControl;
   password: FormControl;
 
-  constructor(public userLogInSesionService: UserLogInSesionService, private router: Router) {
+  constructor(public userLogInSesionService: UserLogInSesionService, private readonly router: Router) {
     this.email = new FormControl('', [Validators.required, Validators.email]);
     this.password = new FormControl('', [Validators.required, Validators.minLength(8)]);
 
@@ -28,9 +27,7 @@ export class LogInFormComponent implements OnInit {
     });
 
   }
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   submitLogInForm() {
     this.postUserLogInSesion();

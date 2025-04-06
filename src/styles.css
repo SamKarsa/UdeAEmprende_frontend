@@ -73,3 +73,11 @@ a {
     color: black;
     /* Cambia el color del enlace a negro, puedes usar cualquier color */
 }
+
+/* Elimina el resaltado solo en items del dropdown */
+.dropdown-menu .dropdown-item:focus, 
+.dropdown-menu .dropdown-item:active {
+  outline: none;
+  background-color: transparent !important;
+  color: inherit !important; /* Mantiene el color original del texto */
+}
